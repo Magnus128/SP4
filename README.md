@@ -6,17 +6,8 @@ længe det har været aktivt.
 Tjeneren kan fra denne hovedskærm vælge et bord, hvorefter en menu vises. I menuen kan tjeneren tage bordets ordrer og 
 eventuelt tilføje noter (f.eks. "medium stegt").
 
-Systemet skal kunne håndtere flere bestillinger på samme bord og automatisk opdatere bordets samlede regning. NÅr et bord bliver taget i brug, skal systemet registrere tidespunkter, så tjeneren kan se hvor længe bordet har være aktivt. 
+Når kunden ønsker at betale, skal systemet kunne generere en samlet regning over alle varer bestilt ved bordet. Efter betaling er gennemført, skal bordet nulstilles og ændres tilbage til status som ledigt.
 
-Når kunden ønsker at betale, skal systemet kunne genrer en samlet regning over alle varer bestilt ved bordet. Efter betaling er gennemført, skal bordet nulstilles og ændres tilbage til status som ledigt. 
+Systemet skal desuden gemme tidligere ordrer og betalinger i en database, så burgeren senere kan se historik over tidligere transakationer. Historikken skal blandt andet indholde bordnummer, dato og samlet pris. 
 
-Systemet skla desuden gemme tidliger order og betalinger i en database, så burgeren senere kan se historik over tidligere transakationer. Historikken skal blandt andet indholde bordnummer, dato og samlet pris. 
-
-Derover sdkal systemet kunne håndtere restaurantens menu, så varer og priser kan opdaters efter behov. 
-
-Projektet udvikles som et konsolbaseret java program med databse til lagring af data. 
-
-
-
-
-
+Derudover skal systemet kunne håndtere restaurantens menu, så varer og priser kan opdateres efter behov.
