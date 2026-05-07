@@ -1,6 +1,7 @@
-# Restaurant Management Controller
+# Restaurant Management System
 
 <img width="1000" height="667" alt="image" src="https://github.com/user-attachments/assets/5523196e-ab39-4fd6-9262-b4858131655f" />
+
 
 Dette er et styringssystem til restauranter. Brugeren bliver først mødt af en hovedskærm som viser restaurantens borde.
 Ved hvert bord står om bordet er ledigt eller optaget. Hvis optaget skal man kunne se bordets løbende regning og hvor
