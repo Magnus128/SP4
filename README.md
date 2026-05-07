@@ -7,5 +7,7 @@ Tjeneren kan fra denne hovedskærm vælge et bord, hvorefter en menu vises. I me
 eventuelt tilføje noter (f.eks. "medium stegt").
 
 Når kunden ønsker at betale, skal systemet kunne generere en samlet regning over alle varer bestilt ved bordet. Efter betaling er gennemført, skal bordet nulstilles og ændres tilbage til status som ledigt.
+
 Systemet skal desuden gemme tidligere ordrer og betalinger i en database, så burgeren senere kan se historik over tidligere transakationer. Historikken skal blandt andet indholde bordnummer, dato og samlet pris. Systemet skal kunne generere daglige og månedlige rapporter som samler den totale omsætning og et overblik over restaurantens mest travle tidspunkter.
-Derudover skal systemet kunne håndtere restaurantens menu, så varer og priser kan opdateres efter behov.
+
+Fra hovedmenuen skal brugeren kunne redigere i restaurantens menu, så varer og priser kan opdateres efter behov.
