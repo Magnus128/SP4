@@ -1,0 +1,51 @@
+@startuml
+!pragma layout smetana
+left to right direction
+
+actor Tjener as t
+actor Admin as u
+
+rectangle RestaurantSystem {
+usecase "Se borde" as UC1
+usecase "Vælg brod" as UC2
+usecase "Opret bestilling" as UC3
+usecase "Tilføj noter" as UC4
+usecase "Se regning" as UC5
+usecase "Generer faktura" as UC6
+usecase "Gennemfør betaling" as UC7
+usecase "Nulstil bord" as UC8
+
+usecase "Se ordrehistorik" as UC9
+usecase "Søg i historikken" as UC10
+usecase "Genrer rapporter" as UC11
+
+usecase "Se menu" as UC12
+usecase "Rediger menu" as UC13
+}
+ ' Tjeners funktioner
+ t --> UC1
+ t --> UC2
+ UC2 --> UC3
+ UC3 --> UC4
+ UC3 --> UC5
+ UC5 --> UC6
+ UC6 --> UC7
+ UC7 --> UC8
+
+ ' Admins funktioner
+ u --> UC9
+ UC9 --> UC10
+ u --> UC11
+ u --> UC13
+
+ ' Menu
+ t --> UC12
+ u --> UC12
+
+
+
+
+
+
+
+@enduml
