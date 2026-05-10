@@ -1,0 +1,175 @@
+@startuml
+'https://plantuml.com/use-case-diagram
+
+
+skinparam actorStyle awesome
+actor Waiter
+
+package "Restaurant Management System" as HovedMenu {
+
+
+actor Manager
+
+rectangle "Menu Management" as UC1 {
+
+    usecase "Show Menu Card" as UC11
+    usecase "Create New Item" as UC12
+    usecase "Delete Item" as UC13
+    usecase "Edit Item" as UC14
+    usecase "Kampagner" as UC15
+
+    UC11-[hidden]-> UC12
+    UC12-[hidden]-> UC13
+    UC13-[hidden]-> UC14
+    UC14-[hidden]-> UC15
+
+}
+
+
+rectangle "Table View" as UC2 {
+
+rectangle "Table View" as UC21 {
+    usecase "Available Tables" as at
+    usecase "Occupied Tables " as ot
+    usecase "Reservations" as rs
+    usecase "Move Table " as mt
+
+    at -[hidden]-> ot
+    ot -[hidden]-> rs
+    rs -[hidden]-> mt
+
+}
+
+
+rectangle "Table" as UC22 {
+    usecase "Bord 1 - AVAILABLE - 0 - 0" as a
+    usecase "Bord 2 - AVAILABLE - 0 - 0" as b
+    usecase "Bord 3 - BUSY - 500 KR - 1 time" as c
+    usecase "Bord 4 - BUSY - 250 KR - 30 min" as d
+    usecase "Bord 5 - RESERVATION - 0 - 0" as e
+    usecase "..." as f
+
+
+    a -[hidden]-> b
+    b -[hidden]-> c
+    c -[hidden]-> d
+    d -[hidden]-> e
+    e -[hidden]-> f
+}
+
+UC21 -[hidden]-> UC22
+
+rectangle "Table details" as UC23 {
+        usecase "Add Items" as x
+        usecase "View Order" as y
+        usecase "Get Invoice" as z
+
+        x -[hidden]-> y
+        y -[hidden]-> z
+
+
+}
+
+UC22 -[hidden]-> UC23
+
+rectangle "Bestillinger" as UC4 {
+
+    usecase "Today’s Recommendations" as UC41
+    usecase "Active Orders" as UC42
+    usecase "Order History" as UC43
+
+    UC41 -[hidden]-> UC42
+    UC42 -[hidden]-> UC43
+
+}
+
+}
+
+
+rectangle "Reports" as UC3 {
+    usecase "Daily Turnover" as UC31
+    usecase "Monthly Turnover" as UC32
+    usecase "Best Selling Items" as UC33
+    usecase "Read customer reviews" as UC34
+
+    UC31 -[hidden]-> UC32
+    UC32 -[hidden]-> UC33
+    UC33 -[hidden]-> UC34
+}
+
+
+actor "Kitchen Staff" as KS
+
+rectangle "Kitchen Panel" as UC5 {
+
+    usecase "Active Orders" as UC51
+    usecase "Ready to Serve" as UC52
+    usecase "Delayed Orders" as UC53
+    usecase "Køkken Noter" as UC54
+
+    UC51 -[hidden]-> UC52
+    UC52 -[hidden]-> UC53
+    UC53 -[hidden]-> UC54
+
+
+}
+
+
+
+rectangle "Inventory Management" as UC6 {
+    usecase "Inventory Status" as UC61
+    usecase "Shopping List" as UC62
+
+    UC61 -[hidden]-> UC62
+}
+
+
+actor Customer
+
+rectangle "Customers" as UC7 {
+    usecase "Customer Comments" as UC71
+    usecase "Rating (out of 5 stars)" as UC72
+    usecase "Complaints" as UC73
+    usecase "Recommendations" as UC74
+
+    UC71 -[hidden]-> UC72
+    UC72 -[hidden]-> UC73
+    UC73 -[hidden]-> UC74
+
+}
+
+
+rectangle "Staff Management" as UC8 {
+
+    usecase "Employees" as UC81
+    usecase "Roles" as UC82
+    usecase "Shift Schedule" as UC83
+    usecase "Salary Information" as UC84
+    usecase "Performance" as UC85
+
+    UC81-[hidden]-> UC82
+    UC82-[hidden]-> UC83
+    UC83-[hidden]-> UC84
+    UC84-[hidden]-> UC85
+
+}
+
+
+Waiter --> UC2
+UC21 --> UC22
+UC22 --> UC23
+
+Manager --> UC1
+Manager --> UC3
+Manager --> UC6
+Manager --> UC8
+
+KS --> UC5
+
+Customer --> UC7
+
+
+}
+
+
+@enduml
