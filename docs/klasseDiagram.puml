@@ -109,16 +109,34 @@ class Invoice {
 
 ' Del 4
 class MenuCard {
+    ArrayList<Item> menuItems
     ArrayList<Item> discountedItems
+    Image frontPage
 }
-class FoodCard
-class DessertCard
-class Item
+class Item {
+    String name
+    String description
+    double price
+    ArrayList<Ingredient> ingredients
+    int calories
+}
 class Dish
-class DrinkCard
 class Drink
-class Ingredient
-class StatReport
+class Ingredient {
+    String name
+}
+class StatReport {
+    String name
+    String description
+    LineChart lineChart
+}
+class EmployeeSchedule {
+    TimeSlot[] timeSlots
+}
+
+class TimeSlot {
+    ArrayList<Employee> employees
+}
 
 Main *-- System
 System *-- User
@@ -139,15 +157,11 @@ Table o-- Customer
 Table o-- Invoice
 Table o-- Reservation
 System o-- StatReport
-MenuCard ..|> FoodCard
-FoodCard *-- Dish
-MenuCard ..|> DessertCard
-DessertCard *-- Dish
-MenuCard ..|> DrinkCard
-DrinkCard *-- Drink
+System o-- EmployeeSchedule
+EmployeeSchedule *-- TimeSlot
+MenuCard *-- Item
 Item --|> Dish
 Item --|> Drink
-Dish *-- Ingredient
-Drink *-- Ingredient
+Item *-- Ingredient
 
 @enduml
