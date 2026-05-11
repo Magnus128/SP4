@@ -27,7 +27,9 @@ class Table {
 
     void addOrder()
     void removeOrder()
+    void printOrder()
     void getInvoice()
+    void printReservation()
 }
 enum TableType {
     AVAILABLE
