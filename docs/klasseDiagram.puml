@@ -1,27 +1,46 @@
 @startuml
 'https://plantuml.com/class-diagram
 
-abstract class AbstractList
-abstract AbstractCollection
-interface List
-interface Collection
-
-List <|-- AbstractList
-Collection <|-- AbstractCollection
-
-Collection <|- List
-AbstractCollection <|- AbstractList
-AbstractList <|-- ArrayList
-
-class ArrayList {
-Object[] elementData
-size()
+class Main
+class System
+class User
+class KitchenStaff
+class Manager
+class Waiter
+class Menu
+class KitchenMenu
+class ManagerMenu
+class WaiterMenu
+class Table
+class TableType
+class Customer
+class CustomerReview
+class Reservation
+class Order
+class Notes
+class Invoice
+class MenuCard {
+    ArrayList<Item> discountedItems
 }
+class FoodCard
+class DessertCard
+class Item
+class Dish
+class DrinkCard
+class Drink
+class Promotion
+class Ingredient
+class StatReport
 
-enum TimeUnit {
-DAYS
-HOURS
-MINUTES
-}
+MenuCard ..|> FoodCard
+FoodCard *-- Dish
+MenuCard ..|> DessertCard
+DessertCard *-- Dish
+MenuCard ..|> DrinkCard
+DrinkCard *-- Drink
+Item --|> Dish
+Item --|> Drink
+Dish *-- Ingredient
+Drink *-- Ingredient
 
 @enduml
