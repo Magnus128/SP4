@@ -1,5 +1,5 @@
 @startuml
-'https://plantuml.com/class-diagram
+!pragma layout smetana
 
 ' Del 1
 class Main
@@ -10,10 +10,43 @@ class Manager
 class Waiter
 
 ' Del 2
-class Menu
-class KitchenMenu
-class ManagerMenu
-class WaiterMenu
+class Menu{
+    int menuID
+    String menuName
+    boolean isVisible
+    ArrayList<Order> activeOrders
+    + show()
+    + hide()
+    + navigate()
+}
+
+class KitchenMenu{
+    ArrayList<Order> delayedOrders
+    ArrayList<Order> readyOrders
+    ArrayList<Notes> kitchenNotes
+    + updateOrderStatus()
+    + addNotes()
+    + markAsReady()
+}
+
+class ManagerMenu {
+    ArrayList<StatReport> reports
+    ArrayList<Item> inventory
+    ArrayList<User> staff
+    + viewReports()
+    + manageInventory()
+    + manageStaff()
+    + manageMenuCard()
+}
+class WaiterMenu {
+    ArrayList<Table> tables
+    + showReservations()
+    + getAvailableTables()
+    + addOrderToTable()
+    + addNoteToOrder()
+    + getInvoice()
+
+}
 
 ' Del 3
 class Table {
