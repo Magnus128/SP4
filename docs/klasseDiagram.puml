@@ -6,11 +6,17 @@ class Main {
 
 }
 class System {
+ArrayList<User> users
+ArrayList<Table> tables
+ArrayList<StatReport> reports
+MenuCard foodMenu
+MenuCard dessertMenu
+MenuCard drinksMenu
+EmployeeSchedule schedule
+Menu userMenu
 
 }
 class User {
-ArrayList<User> users
-
 int userID;
 String name;
 double salary;
@@ -20,14 +26,6 @@ void addUser(String Name, double salary)
 void removeUser(String name)
 void printUserInfo(String name)
 void printAllUsers()
-
-
-
-}
-class KitchenStaff
-class Manager
-class Waiter {
-
 
 
 
@@ -162,11 +160,18 @@ class TimeSlot {
     ArrayList<Employee> employees
 }
 
+class Employee {
+    Job job
+}
+
+enum Job {
+    CHEF,
+    KITCHEN ASSISTANT,
+    WAITER,
+    MANAGER
+}
 Main *-- System
 System *-- User
-User --|> KitchenStaff
-User --|> Manager
-User --|> Waiter
 System *-- Menu
 Menu --|> KitchenMenu
 Menu --|> ManagerMenu
@@ -183,6 +188,8 @@ Table o-- Reservation
 System o-- StatReport
 System o-- EmployeeSchedule
 EmployeeSchedule *-- TimeSlot
+TimeSlot o-- Employee
+Employee *-- Job
 MenuCard *-- Item
 Item --|> Dish
 Item --|> Drink
