@@ -7,7 +7,6 @@ actor Waiter
 
 package "Restaurant Management System" as HovedMenu {
 
-
 actor Manager
 
 rectangle "Menu Management" as UC1 {
@@ -25,7 +24,6 @@ rectangle "Menu Management" as UC1 {
 
 }
 
-
 rectangle "Table View" as UC2 {
 
 rectangle "Table View" as UC21 {
@@ -39,7 +37,6 @@ rectangle "Table View" as UC21 {
     rs -[hidden]-> mt
 
 }
-
 
 rectangle "Table" as UC22 {
     usecase "Bord 1 - AVAILABLE - 0 - 0" as a
@@ -85,7 +82,6 @@ rectangle "Bestillinger" as UC4 {
 
 }
 
-
 rectangle "Reports" as UC3 {
     usecase "Daily Turnover" as UC31
     usecase "Monthly Turnover" as UC32
@@ -96,7 +92,6 @@ rectangle "Reports" as UC3 {
     UC32 -[hidden]-> UC33
     UC33 -[hidden]-> UC34
 }
-
 
 actor "Kitchen Staff" as KS
 
@@ -113,8 +108,6 @@ rectangle "Kitchen Panel" as UC5 {
 
 
 }
-
-
 
 rectangle "Inventory Management" as UC6 {
     usecase "Inventory Status" as UC61
@@ -135,9 +128,7 @@ rectangle "Staff Management" as UC8 {
     UC82-[hidden]-> UC83
     UC83-[hidden]-> UC84
     UC84-[hidden]-> UC85
-
 }
-
 
 Waiter --> UC2
 UC21 --> UC22

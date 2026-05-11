@@ -1,0 +1,64 @@
+@startuml
+'https://plantuml.com/object-diagram
+
+object System
+object User
+object KitchenStaff
+object Manager
+object Waiter
+object Menu
+object KitchenMenu
+object ManagerMenu
+object WaiterMenu
+object Table
+object TableType
+object Customer
+object CustomerReview
+object Reservation
+object Order
+object Notes
+object Invoice
+object FoodCard
+object Dish
+object DrinkCard
+object Drink
+object Promotion
+object ShoppingList
+object Inventory
+object Ingredient
+object StatReport
+
+System *-- User
+User <|-- KitchenStaff
+User <|-- Manager
+User <|-- Waiter
+KitchenStaff *--- KitchenMenu
+Manager *--- ManagerMenu
+Waiter *--- WaiterMenu
+Menu <|-- KitchenMenu
+Menu <|-- ManagerMenu
+Menu <|-- WaiterMenu
+WaiterMenu *-- Table
+TableType --* Table
+Table o-- Order
+Order o-- Notes
+Table o-- Customer
+Table o-- Invoice
+Table o-- Reservation
+ManagerMenu *-- ShoppingList
+ManagerMenu *-- Inventory
+ManagerMenu o-- StatReport
+ManagerMenu o-- CustomerReview
+ManagerMenu *-- FoodCard
+FoodCard *-- Dish
+FoodCard o-- Promotion
+Dish *-- Ingredient
+DrinkCard *-- Drink
+DrinkCard o-- Promotion
+Drink *-- Ingredient
+ManagerMenu *-- DrinkCard
+Inventory o-- Ingredient
+ShoppingList o-- Ingredient
+KitchenMenu o-- Order
+
+@enduml
