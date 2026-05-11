@@ -123,22 +123,6 @@ rectangle "Inventory Management" as UC6 {
     UC61 -[hidden]-> UC62
 }
 
-
-actor Customer
-
-rectangle "Customers" as UC7 {
-    usecase "Customer Comments" as UC71
-    usecase "Rating (out of 5 stars)" as UC72
-    usecase "Complaints" as UC73
-    usecase "Recommendations" as UC74
-
-    UC71 -[hidden]-> UC72
-    UC72 -[hidden]-> UC73
-    UC73 -[hidden]-> UC74
-
-}
-
-
 rectangle "Staff Management" as UC8 {
 
     usecase "Employees" as UC81
@@ -165,10 +149,6 @@ Manager --> UC6
 Manager --> UC8
 
 KS --> UC5
-
-Customer --> UC7
-
-
 }
 
 
