@@ -50,24 +50,62 @@ class WaiterMenu {
 
 ' Del 3
 class Table {
-    int tableID,
-    String tableName,
-    TableType tableType,
+    int tableID
+    String tableName
+    TableType tableType
     double Amount
     LocalDate openingTime
+    LocalDate closingTime
+    ArrayList<Order> orders
+
+    void addOrder()
+    void removeOrder()
+    void printOrder()
+    void getInvoice()
+    void printReservation()
 }
 enum TableType {
-    AVAILABLE,
-    BUSY,
+    AVAILABLE
+    BUSY
     RESERVED
 }
 class Customer {
+    String name
+    String phone
     String review
 }
-class Reservation
-class Order
-class Notes
-class Invoice
+class Reservation {
+    LocalDate reservationTime
+    int personCount
+}
+
+class Order {
+    int OrderID
+    int OrderLineID
+    int tableID
+    int menuID
+    double price
+    OrderStatus orderstatus
+
+}
+
+enum OrderStatus{
+    ACTIVE
+    READY
+    CANCELLED
+}
+
+class Notes {
+    Arraylist<String> notes
+    void addNotes()
+}
+class Invoice {
+    int InvoiceID
+    LocalDate InvoiceDate
+    int orderID
+    double totalAmount
+    void printInvoice()
+}
 
 ' Del 4
 class MenuCard {
@@ -96,6 +134,7 @@ System *-- Table
 TableType --* Table
 Table o-- Order
 Order o-- Notes
+OrderStatus --* Order
 Table o-- Customer
 Table o-- Invoice
 Table o-- Reservation
