@@ -1,0 +1,22 @@
+public class Order {
+
+	private int orderID;
+	private int tableID;
+	private int menuID;
+	private double price;
+	private OrderStatus orderstatus;
+
+	public Order(int orderID,int tableID,int menuID,double price,OrderStatus orderstatus) {
+		this.orderID = orderID;
+		this.tableID = tableID;
+		this.menuID = menuID;
+		this.price = price;
+		this.orderstatus = orderstatus;
+
+	}
+
+
+
+
+
+}

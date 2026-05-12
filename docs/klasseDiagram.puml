@@ -5,7 +5,7 @@
 class Main {
 
 }
-class System {
+class Restaurant {
 ArrayList<User> users
 ArrayList<Table> tables
 ArrayList<StatReport> reports
@@ -33,8 +33,7 @@ void printAllUsers()
 
 ' Del 2
 class Menu{
-    int menuID
-    String menuName
+    int id
     boolean isVisible
     ArrayList<Order> activeOrders
     + show()
@@ -72,10 +71,9 @@ class WaiterMenu {
 
 ' Del 3
 class Table {
-    int tableID
-    String tableName
-    TableType tableType
-    double Amount
+    int id
+    TableStatus tableType
+    int seats
     LocalDate openingTime
     LocalDate closingTime
     ArrayList<Order> orders
@@ -83,10 +81,10 @@ class Table {
     void addOrder()
     void removeOrder()
     void printOrder()
-    void getInvoice()
+    void generateInvoice()
     void printReservation()
 }
-enum TableType {
+enum TableStatus {
     AVAILABLE
     BUSY
     RESERVED
@@ -94,18 +92,19 @@ enum TableType {
 class Customer {
     String name
     String phone
-    String review
+    ArrayList<String> reviews
 }
 class Reservation {
-    LocalDate reservationTime
+    LocalDate time
     int personCount
+    String customerName
 }
 
 class Order {
     int OrderID
     int OrderLineID
     int tableID
-    int menuID
+    int id
     double price
     OrderStatus orderstatus
 
@@ -122,9 +121,9 @@ class Notes {
     void addNotes()
 }
 class Invoice {
-    int InvoiceID
-    LocalDate InvoiceDate
-    int orderID
+    int id
+    LocalDate date
+    ArrayList<Order> orders
     double totalAmount
     void printInvoice()
 }
@@ -170,23 +169,23 @@ enum Job {
     WAITER,
     MANAGER
 }
-Main *-- System
-System *-- User
-System *-- Menu
+Main *-- Restaurant
+Restaurant *-- User
+Restaurant *-- Menu
 Menu --|> KitchenMenu
 Menu --|> ManagerMenu
 Menu --|> WaiterMenu
-System *-- MenuCard
-System *-- Table
-TableType --* Table
+Restaurant *-- MenuCard
+Restaurant *-- Table
+TableStatus --* Table
 Table o-- Order
 Order o-- Notes
 OrderStatus --* Order
 Table o-- Customer
 Table o-- Invoice
 Table o-- Reservation
-System o-- StatReport
-System o-- EmployeeSchedule
+Restaurant o-- StatReport
+Restaurant o-- EmployeeSchedule
 EmployeeSchedule *-- TimeSlot
 TimeSlot o-- Employee
 Employee *-- Job
