@@ -31,28 +31,66 @@ public class WaiterMenu extends Menu{
 		//
 	}
 
-	public void getAvailableTable() {
+	public Table getAvailableTable(int seatsNeeded) {
 		for(Table table : tables){
-			if(table.getId() == table.getId()){
+			if(table.getSeats() >= seatsNeeded){ // Tjekker om bordet har nok plads
+				return table;
+			}
+		}
+		return null;
+	}
+
+	public void addOrderToTable(int tableId, Order order) {
+		for(Table table : tables){
+			if(table.getId() == tableId){
 				table.addOrder(order);
+				break;
 			}
 		}
 	}
 
-	public void addOrderToTable() {
-
-	}
-
-	public void removeOrderFromTable() {
+	public void removeOrderFromTable(int tableId, Order order) {
 		for(Table table : tables){
-
+			if(table.getId() == tableId){
+				table.removeOrder();
+				break;
+			}
 		}
 	}
 
-	public void showReservation() {
+	public void showReservation(int tableId) {
+		// Viser reservation for specifik bord
+		for(Table table : tables){
+			if(table.getId() == tableId){
+				table.printReservation();
+				return;
+			}
+		}
+		System.out.println("Bord ikke fundet");
 	}
 
-	public void getInvoice() {
+	public void showAllReservations(){ // Viser alle reservationer
+		System.out.println("=== Alle Reservationer ===");
+		for(Table table : tables){
+			if(table.getReservation() != null){
+				table.printReservation();
+			}
+		}
+	}
+
+	public void getInvoice(int tableId) {
+		for(Table table : tables){
+			if(table.getId() == tableId){
+				Invoice invoice = table.generateInvoice();
+				if(invoice != null){
+					invoice.printInvoice();
+				} else {
+					System.out.println("Ingen faktura kunne genereres for bord " + tableId);
+				}
+				return;
+			}
+		}
+		System.out.println("Bord ikke fundet");
 	}
 
 

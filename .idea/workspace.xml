@@ -5,34 +5,52 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="8f632976-210e-49ac-8840-8d3c8f12b369" name="Changes" comment="codewithme">
-      <change afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/restaurantData.sqlite" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/DBConnector.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/Position.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/klasseDiagram.puml" beforeDir="false" afterPath="$PROJECT_DIR$/docs/klasseDiagram.puml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Dish.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Dish.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Item.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Item.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/KitchenMenu.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/KitchenMenu.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ManagerMenu.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ManagerMenu.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Menu.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Menu.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/MenuCard.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/MenuCard.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/User.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/WaiterMenu.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/WaiterMenu.java" afterDir="false" />
-    </list>
-    <list id="d5e5d773-06f5-4771-9dd5-b4e6f4f665e4" name="Changes by admin" comment="">
-      <change beforePath="$PROJECT_DIR$/src/main/java/Order.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Order.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Reservation.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Reservation.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/Employee.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/Job.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/Note.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/Table.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Table.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/User.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/WaiterMenu.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/WaiterMenu.java" afterDir="false" />
     </list>
+    <list id="d5e5d773-06f5-4771-9dd5-b4e6f4f665e4" name="Changes by admin" comment="" />
     <list id="a9b5724f-b6cc-463a-adce-ac0a97d6b905" name="Changes by fgoc" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="CopilotChats">
+    <option name="panelChat">
+      <chat>
+        <option name="activeSessionId" value="6cbd0412-6414-4a2f-b7b6-ad8ac5551c23" />
+        <option name="sessions">
+          <session>
+            <option name="chatType" value="PANEL" />
+            <option name="id" value="abbf54ab-ed9c-4e0c-83d6-55633e150fc7" />
+            <option name="modeId" value="Ask" />
+            <option name="modelType" value="builtin_family" />
+            <option name="modelValue" value="auto" />
+            <option name="status" value="Completed" />
+            <option name="targetType" value="LOCAL" />
+          </session>
+          <session>
+            <option name="chatType" value="PANEL" />
+            <option name="id" value="6cbd0412-6414-4a2f-b7b6-ad8ac5551c23" />
+            <option name="modeId" value="Ask" />
+            <option name="modelType" value="builtin_family" />
+            <option name="modelValue" value="auto" />
+            <option name="targetType" value="LOCAL" />
+          </session>
+        </option>
+        <option name="type" value="PANEL" />
+      </chat>
+    </option>
+  </component>
+  <component name="CopilotUserSelectedModel">
+    <selectedModels>
+      <entry key="agent-panel" value="Auto" />
+      <entry key="chat-panel" value="Auto" />
+    </selectedModels>
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -40,12 +58,17 @@
         <option value="UML Use Case" />
         <option value="UML Object" />
         <option value="UML Class" />
-        <option value="Class" />
         <option value="Enum" />
+        <option value="Class" />
       </list>
     </option>
   </component>
   <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="main" />
+      </map>
+    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="GitHubPullRequestSearchHistory">{
@@ -60,32 +83,88 @@
     &quot;accountId&quot;: &quot;006ad53a-fe3c-458b-b3a1-34ce1fe30b49&quot;
   }
 }</component>
-  <component name="LineStatusTrackerManager">
-    <file path="$PROJECT_DIR$/src/main/java/WaiterMenu.java">
-      <ranges>
-        <range start1="6" end1="8" start2="6" end2="8" changelist="8f632976-210e-49ac-8840-8d3c8f12b369" />
-        <range start1="13" end1="13" start2="13" end2="25" changelist="8f632976-210e-49ac-8840-8d3c8f12b369" />
-        <range start1="16" end1="16" start2="28" end2="32" changelist="8f632976-210e-49ac-8840-8d3c8f12b369" />
-        <range start1="18" end1="19" start2="34" end2="39" changelist="8f632976-210e-49ac-8840-8d3c8f12b369" />
-        <range start1="22" end1="22" start2="42" end2="43" changelist="8f632976-210e-49ac-8840-8d3c8f12b369" />
-        <range start1="25" end1="25" start2="46" end2="49" changelist="d5e5d773-06f5-4771-9dd5-b4e6f4f665e4" />
-        <range start1="28" end1="29" start2="52" end2="52" changelist="8f632976-210e-49ac-8840-8d3c8f12b369" />
-        <range start1="32" end1="33" start2="55" end2="55" changelist="8f632976-210e-49ac-8840-8d3c8f12b369" />
-      </ranges>
-    </file>
-    <file path="$PROJECT_DIR$/src/main/java/User.java">
-      <ranges>
-        <range start1="5" end1="6" start2="5" end2="6" changelist="8f632976-210e-49ac-8840-8d3c8f12b369" />
-        <range start1="7" end1="8" start2="7" end2="8" changelist="8f632976-210e-49ac-8840-8d3c8f12b369" />
-        <range start1="13" end1="13" start2="13" end2="31" changelist="d5e5d773-06f5-4771-9dd5-b4e6f4f665e4" />
-      </ranges>
-    </file>
+  <component name="McpProjectServerCommands">
+    <commands />
+    <urls />
+  </component>
+  <component name="NextEditCompletionFeaturesState">
+    <decayedCancelled>
+      <entry key="MS100" value="1.0" />
+      <entry key="MS500" value="1.0000000058396632" />
+      <entry key="S2" value="1.0199130713948357" />
+      <entry key="S5" value="1.5576478882096245" />
+      <entry key="S10" value="3.125392275549657" />
+      <entry key="S30" value="8.718938694838382" />
+      <entry key="S60" value="14.090547455214043" />
+      <entry key="M2" value="21.336414118757492" />
+      <entry key="M5" value="36.53685979863496" />
+      <entry key="M10" value="54.34344717043443" />
+      <entry key="M15" value="67.0291862190961" />
+      <entry key="M30" value="88.95690375608535" />
+      <entry key="H1" value="106.35136188680336" />
+      <entry key="H2" value="117.56966167010889" />
+      <entry key="H4" value="123.97822472719339" />
+      <entry key="D1" value="129.7842769198218" />
+      <entry key="W1" value="130.8251735760482" />
+    </decayedCancelled>
+    <decayedSelected>
+      <entry key="MS100" value="1.368331783784137E-22" />
+      <entry key="MS500" value="4.2387546958668494E-5" />
+      <entry key="S2" value="0.08131647874625661" />
+      <entry key="S5" value="0.45262284369510936" />
+      <entry key="S10" value="1.2245077600888177" />
+      <entry key="S30" value="4.598418423745857" />
+      <entry key="S60" value="8.18620278505351" />
+      <entry key="M2" value="13.623851361957797" />
+      <entry key="M5" value="26.291414186800417" />
+      <entry key="M10" value="40.78766698344593" />
+      <entry key="M15" value="50.6066692914961" />
+      <entry key="M30" value="66.92374602088907" />
+      <entry key="H1" value="79.50378155844389" />
+      <entry key="H2" value="87.50571380768737" />
+      <entry key="H4" value="92.04646239964208" />
+      <entry key="D1" value="96.1438716982648" />
+      <entry key="W1" value="96.87692226522748" />
+    </decayedSelected>
+    <decayedShown>
+      <entry key="MS100" value="9.698168900752301E-4" />
+      <entry key="MS500" value="0.24967293170778132" />
+      <entry key="S2" value="0.7908574176068447" />
+      <entry key="S5" value="1.801121794587728" />
+      <entry key="S10" value="4.131777706383743" />
+      <entry key="S30" value="13.095507907983365" />
+      <entry key="S60" value="22.09502876058787" />
+      <entry key="M2" value="34.81172029994562" />
+      <entry key="M5" value="62.692522126863956" />
+      <entry key="M10" value="95.009541112858" />
+      <entry key="M15" value="117.52931014136037" />
+      <entry key="M30" value="155.80584824672036" />
+      <entry key="H1" value="185.8093836992227" />
+      <entry key="H2" value="205.04983039559895" />
+      <entry key="H4" value="216.0111575864413" />
+      <entry key="D1" value="225.9257797782189" />
+      <entry key="W1" value="227.70175452322252" />
+    </decayedShown>
   </component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 6,
   &quot;fromUser&quot;: false
 }</component>
   <component name="ProjectId" id="3DO9500JKcqYP15V3qgH9o64Cn7" />
+  <component name="ProjectSessionTemplates">
+    <option name="panelTemplate">
+      <template>
+        <option name="modeId" value="Ask" />
+        <option name="model">
+          <model>
+            <option name="modelType" value="builtin_family" />
+            <option name="modelValue" value="auto" />
+          </model>
+        </option>
+        <option name="targetType" value="LOCAL" />
+      </template>
+    </option>
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
@@ -98,9 +177,13 @@
     "RunOnceActivity.typescript.service.memoryLimit.init": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "codeWithMe.voiceChat.enabledByDefault": "false",
-    "git-widget-placeholder": "main",
+    "git-widget-placeholder": "daud1",
     "ignore.virus.scanning.warn.message": "true",
     "kotlin-language-version-configured": "true",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
     "nodejs_package_manager_path": "npm",
     "project.structure.last.edited": "Modules",
     "project.structure.proportion": "0.0",
