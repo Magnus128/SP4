@@ -16,7 +16,15 @@ public class Order {
 	}
 
 
+	public int getOrderID(){return orderID;}
 
+	public int getTableID(){return tableID;}
 
+	public int getMenuID(){return menuID;}
 
+	public double getPrice(){return price;}
+
+	public OrderStatus getOrderstatus() {
+		return orderstatus;
+	}
 }

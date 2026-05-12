@@ -35,4 +35,10 @@ public class Table {
 	public void printReservation() {
 
 	}
+
+	public int getId(){return id;}
+
+	public int getSeats(){return seats;}
+
+	public ArrayList<Order> getOrders(){return orders;}
 }

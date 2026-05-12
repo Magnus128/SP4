@@ -33,7 +33,6 @@ void printAllUsers()
 
 ' Del 2
 class Menu{
-    int id
     boolean isVisible
     ArrayList<Order> activeOrders
     + show()

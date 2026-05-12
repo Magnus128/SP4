@@ -1,24 +1,18 @@
 import java.util.ArrayList;
 
-public class Menu {
+public abstract class Menu {
 
-	private int id;
-	private boolean isVisible;
-	ArrayList<Order> activeOrders;
+	protected boolean isVisible;
+	protected ArrayList<Order> activeOrders;
 
-	public Menu(int id) {
-		this.id = id;
+	public Menu(){
+		isVisible = false;
+		activeOrders = new ArrayList<>();
 	}
 
-	public void show() {
+	public abstract void show();
 
-	}
+	public abstract void hide();
 
-	public void hide() {
-
-	}
-
-	public void navigate() {
-
-	}
+	public abstract void navigate();
 }

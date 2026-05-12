@@ -3,8 +3,8 @@ import java.util.ArrayList;
 
 public class MenuCard {
 
-	ArrayList<Item> menuItems;
-	ArrayList<Item> discountedItems;
+	private ArrayList<Item> menuItems;
+	private ArrayList<Item> discountedItems;
 	Image frontpage;
 
 	public MenuCard() {
@@ -12,5 +12,7 @@ public class MenuCard {
 		discountedItems = new ArrayList<>();
 	}
 
-
+	public ArrayList<Item> getMenuItems() {
+		return menuItems;
+	}
 }
