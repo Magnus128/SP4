@@ -4,15 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="8f632976-210e-49ac-8840-8d3c8f12b369" name="Changes" comment="database">
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+    <list default="true" id="8f632976-210e-49ac-8840-8d3c8f12b369" name="Changes" comment="Text UI">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/DBConnector.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/DBConnector.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Dish.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Dish.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Drink.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Drink.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Restaurant.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Restaurant.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/WaiterMenu.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/WaiterMenu.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/KitchenMenu.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/KitchenMenu.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Order.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Order.java" afterDir="false" />
     </list>
     <list id="d5e5d773-06f5-4771-9dd5-b4e6f4f665e4" name="Changes by admin" comment="" />
     <option name="SHOW_DIALOG" value="false" />
@@ -20,18 +15,81 @@
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="CopilotChats">
+    <option name="panelChat">
+      <chat>
+        <option name="activeSessionId" value="d19051c3-721b-4f42-894a-6f721485e1dd" />
+        <option name="sessions">
+          <session>
+            <option name="chatType" value="PANEL" />
+            <option name="id" value="abbf54ab-ed9c-4e0c-83d6-55633e150fc7" />
+            <option name="modeId" value="Ask" />
+            <option name="modelType" value="builtin_family" />
+            <option name="modelValue" value="auto" />
+            <option name="status" value="Completed" />
+            <option name="targetType" value="LOCAL" />
+          </session>
+          <session>
+            <option name="chatType" value="PANEL" />
+            <option name="id" value="6cbd0412-6414-4a2f-b7b6-ad8ac5551c23" />
+            <option name="modeId" value="Ask" />
+            <option name="modelType" value="builtin_family" />
+            <option name="modelValue" value="auto" />
+            <option name="targetType" value="LOCAL" />
+          </session>
+          <session>
+            <option name="chatType" value="PANEL" />
+            <option name="id" value="a5b94c45-eeef-425e-ba1c-8a5d7b16e19a" />
+            <option name="modeId" value="Ask" />
+            <option name="modelType" value="builtin_family" />
+            <option name="modelValue" value="auto" />
+            <option name="status" value="Completed" />
+            <option name="targetType" value="LOCAL" />
+          </session>
+          <session>
+            <option name="chatType" value="PANEL" />
+            <option name="id" value="d19051c3-721b-4f42-894a-6f721485e1dd" />
+            <option name="modeId" value="Ask" />
+            <option name="modelType" value="builtin_family" />
+            <option name="modelValue" value="auto" />
+            <option name="targetType" value="LOCAL" />
+          </session>
+        </option>
+        <option name="type" value="PANEL" />
+      </chat>
+    </option>
+  </component>
+  <component name="CopilotPersistence">
+    <persistenceIdMap>
+      <entry key="_/Users/admin/Desktop/1. Semester/SP4 Restaurant Management System" value="3DO9500JKcqYP15V3qgH9o64Cn7" />
+    </persistenceIdMap>
+  </component>
+  <component name="CopilotUserSelectedModel">
+    <selectedModels>
+      <entry key="agent-panel" value="Auto" />
+      <entry key="chat-panel" value="Auto" />
+    </selectedModels>
+  </component>
+  <component name="EmbeddingIndexingInfo">
+    <option name="cachedIndexableFilesCount" value="53" />
+  </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="UML Use Case" />
         <option value="UML Object" />
         <option value="UML Class" />
-        <option value="Class" />
         <option value="Enum" />
+        <option value="Class" />
       </list>
     </option>
   </component>
   <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="main" />
+      </map>
+    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="GitHubPullRequestSearchHistory">{
@@ -40,12 +98,75 @@
     &quot;assignee&quot;: &quot;Magnus128&quot;
   }
 }</component>
-  <component name="GithubPullRequestsUISettings">{
-  &quot;selectedUrlAndAccountId&quot;: {
-    &quot;url&quot;: &quot;https://github.com/Magnus128/SP4.git&quot;,
-    &quot;accountId&quot;: &quot;006ad53a-fe3c-458b-b3a1-34ce1fe30b49&quot;
+  <component name="GithubPullRequestsUISettings"><![CDATA[{
+  "selectedUrlAndAccountId": {
+    "url": "https://github.com/Magnus128/SP4.git",
+    "accountId": "b8d4ffc3-5398-4ddc-99a1-a1b0ac94c0e3"
   }
-}</component>
+}]]></component>
+  <component name="McpProjectServerCommands">
+    <commands />
+    <urls />
+  </component>
+  <component name="NextEditCompletionFeaturesState">
+    <decayedCancelled>
+      <entry key="MS100" value="6.911754094434865E-41" />
+      <entry key="MS500" value="9.28790267022091E-9" />
+      <entry key="S2" value="0.009833438713230997" />
+      <entry key="S5" value="0.17363335363338211" />
+      <entry key="S10" value="0.5840887150661086" />
+      <entry key="S30" value="2.220037289827283" />
+      <entry key="S60" value="4.481416322940826" />
+      <entry key="M2" value="7.440467299364945" />
+      <entry key="M5" value="11.073213539515367" />
+      <entry key="M10" value="14.552811565236645" />
+      <entry key="M15" value="18.59819499638799" />
+      <entry key="M30" value="32.299778672334284" />
+      <entry key="H1" value="52.449676028498324" />
+      <entry key="H2" value="71.45701006227486" />
+      <entry key="H4" value="84.87755812301059" />
+      <entry key="D1" value="98.84389785578072" />
+      <entry key="W1" value="101.54104324947588" />
+    </decayedCancelled>
+    <decayedSelected>
+      <entry key="MS100" value="1.0000000439366465" />
+      <entry key="MS500" value="1.0337726688179574" />
+      <entry key="S2" value="1.4309717610118182" />
+      <entry key="S5" value="1.899802964940167" />
+      <entry key="S10" value="2.849948367099999" />
+      <entry key="S30" value="6.817861062100785" />
+      <entry key="S60" value="11.201939484432163" />
+      <entry key="M2" value="15.930140095051776" />
+      <entry key="M5" value="21.677758922743052" />
+      <entry key="M10" value="28.48103703306669" />
+      <entry key="M15" value="36.42010771673541" />
+      <entry key="M30" value="62.87682579872309" />
+      <entry key="H1" value="102.75046739806895" />
+      <entry key="H2" value="141.40619100198055" />
+      <entry key="H4" value="169.15981638193043" />
+      <entry key="D1" value="198.36176677870972" />
+      <entry key="W1" value="204.03384114662498" />
+    </decayedSelected>
+    <decayedShown>
+      <entry key="MS100" value="0.00713930821967224" />
+      <entry key="MS500" value="0.3789813738570983" />
+      <entry key="S2" value="1.075272602437068" />
+      <entry key="S5" value="1.806939497092379" />
+      <entry key="S10" value="3.169563009370216" />
+      <entry key="S30" value="8.75212708125354" />
+      <entry key="S60" value="15.427765698190989" />
+      <entry key="M2" value="23.184508525840286" />
+      <entry key="M5" value="32.65190496541248" />
+      <entry key="M10" value="42.972504871232005" />
+      <entry key="M15" value="54.967576917767275" />
+      <entry key="M30" value="95.13375098808073" />
+      <entry key="H1" value="155.16529305869582" />
+      <entry key="H2" value="212.8392670439929" />
+      <entry key="H4" value="254.02307453637883" />
+      <entry key="D1" value="297.20287274683454" />
+      <entry key="W1" value="305.5744742271399" />
+    </decayedShown>
+  </component>
   <component name="ProblemsViewState">
     <option name="selectedTabId" value="CurrentFile" />
   </component>
@@ -54,6 +175,20 @@
   &quot;fromUser&quot;: false
 }</component>
   <component name="ProjectId" id="3DO9500JKcqYP15V3qgH9o64Cn7" />
+  <component name="ProjectSessionTemplates">
+    <option name="panelTemplate">
+      <template>
+        <option name="modeId" value="Ask" />
+        <option name="model">
+          <model>
+            <option name="modelType" value="builtin_family" />
+            <option name="modelValue" value="auto" />
+          </model>
+        </option>
+        <option name="targetType" value="LOCAL" />
+      </template>
+    </option>
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
@@ -68,9 +203,13 @@
     "RunOnceActivity.typescript.service.memoryLimit.init": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "codeWithMe.voiceChat.enabledByDefault": "false",
-    "git-widget-placeholder": "main",
+    "git-widget-placeholder": "mk2",
     "ignore.virus.scanning.warn.message": "true",
     "kotlin-language-version-configured": "true",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
     "nodejs_package_manager_path": "npm",
     "project.structure.last.edited": "Project",
     "project.structure.proportion": "0.0",
@@ -223,7 +362,15 @@
       <option name="project" value="LOCAL" />
       <updated>1778596209198</updated>
     </task>
-    <option name="localTasksCounter" value="14" />
+    <task id="LOCAL-00014" summary="Text UI">
+      <option name="closed" value="true" />
+      <created>1778664461448</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1778664461448</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -239,6 +386,15 @@
     <MESSAGE value="useCaseDiagram" />
     <MESSAGE value="codewithme" />
     <MESSAGE value="database" />
-    <option name="LAST_COMMIT_MESSAGE" value="database" />
+    <MESSAGE value="Text UI" />
+    <option name="LAST_COMMIT_MESSAGE" value="Text UI" />
+  </component>
+  <component name="github-copilot-workspace">
+    <instructionFileLocations>
+      <option value=".github/instructions" />
+    </instructionFileLocations>
+    <promptFileLocations>
+      <option value=".github/prompts" />
+    </promptFileLocations>
   </component>
 </project>

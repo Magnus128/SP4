@@ -28,6 +28,8 @@ public class Order {
 		return orderstatus;
 	}
 
+	public void setOrderstatus(OrderStatus orderstatus){this.orderstatus = orderstatus;}
+
 	@Override
 	public String toString() {
 		return "Order{" +
