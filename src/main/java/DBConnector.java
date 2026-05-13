@@ -91,7 +91,7 @@ public class DBConnector {
 	public double selectDailyRevenue(String day) {
 		double revenue = 0;
 
-		String query = "select "
+		String query = "select ";
 
 		return revenue;
 	}
