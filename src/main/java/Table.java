@@ -21,8 +21,8 @@ public class Table {
 		orders.add(order);
 	}
 
-	public void removeOrder() {
-
+	public void removeOrder(Order order) {
+		orders.remove(order);
 	}
 
 	public void printOrder() {
@@ -47,12 +47,47 @@ public class Table {
 
 	public Reservation getReservation(){return reservation;}
 
+	public TableStatus getStatus() {
+		return status;
+	}
+
+	public LocalDateTime getOpeningTime() {
+		return openingTime;
+	}
+
+	public LocalDateTime getClosingTime() {
+		return closingTime;
+	}
+
+	public void setId(int id) {
+		this.id = id;
+	}
+
+	public void setStatus(TableStatus status) {
+		this.status = status;
+	}
+
+	public void setSeats(int seats) {
+		this.seats = seats;
+	}
+
+	public void setOpeningTime(LocalDateTime openingTime) {
+		this.openingTime = openingTime;
+	}
+
+	public void setClosingTime(LocalDateTime closingTime) {
+		this.closingTime = closingTime;
+	}
+
+	public void setOrders(ArrayList<Order> orders) {
+		this.orders = orders;
+	}
+
 	@Override
 	public String toString() {
-		return "Table{" +
-				"id=" + id +
-				", status=" + status +
-				", seats=" + seats +
-				'}';
+		return id +
+				".table - " + status +
+				" - " + seats;
 	}
+
 }

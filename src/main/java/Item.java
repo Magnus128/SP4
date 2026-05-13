@@ -17,7 +17,31 @@ public class Item {
 		this.price = price;
 	}
 
+	public int getId() {
+		return id;
+	}
 
+	public String getName() {
+		return name;
+	}
 
+	public String getCategory() {
+		return category;
+	}
 
+	public double getPrice() {
+		return price;
+	}
+
+	public ArrayList<Ingredient> getIngredients() {
+		return ingredients;
+	}
+
+	@Override
+	public String toString() {
+		return name +
+				" - " + category +
+				" - " + price;
+	}
 }
+

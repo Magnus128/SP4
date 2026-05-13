@@ -89,10 +89,51 @@ public class DBConnector {
 	}
 
 	public MenuCard selectdessertMenu() {
-		return null;
+		MenuCard dessertMenu = new MenuCard();
+
+		String query = "select * from dessertMenu";
+
+		try {
+			Statement statement = conn.createStatement();
+			ResultSet rs = statement.executeQuery(query);
+
+			while (rs.next()) {
+				int menuItemID = rs.getInt("menuItemID");
+				String itemName = rs.getString("itemName");
+				String category = rs.getString("category");
+				double price = rs.getDouble("price");
+
+				dessertMenu.getMenuItems().add(new Dish(menuItemID, itemName, category, price));
+			}
+
+		} catch (SQLException e) {
+			throw new RuntimeException(e);
+		}
+		return dessertMenu;
 	}
 
 	public MenuCard selectdrinksMenu() {
-		return null;
+		MenuCard drinksMenu = new MenuCard();
+
+		String query = "select * from drinkMenu";
+
+		try {
+			Statement statement = conn.createStatement();
+			ResultSet rs = statement.executeQuery(query);
+
+			while (rs.next()) {
+				int menuItemID = rs.getInt("menuItemID");
+				String itemName = rs.getString("itemName");
+				String category = rs.getString("category");
+				double price = rs.getDouble("price");
+
+				drinksMenu.getMenuItems().add(new Drink(menuItemID, itemName, category, price));
+			}
+
+		} catch (SQLException e) {
+			throw new RuntimeException(e);
+		}
+		return drinksMenu;
 	}
+
 }

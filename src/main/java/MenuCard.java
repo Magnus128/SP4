@@ -15,4 +15,13 @@ public class MenuCard {
 	public ArrayList<Item> getMenuItems() {
 		return menuItems;
 	}
+
+	public void printMenuItem() {
+		int i = 0;
+		for (Item item : menuItems) {
+			System.out.println(i + "." + item);
+			i++;
+		}
+	}
+
 }
