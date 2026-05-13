@@ -39,9 +39,12 @@ public class Item {
 
 	@Override
 	public String toString() {
-		return name +
-				" - " + category +
-				" - " + price;
+		return String.format(
+				"%-20s %-15s %-10.2f",
+				name,
+				category,
+				price
+		);
 	}
 }
 

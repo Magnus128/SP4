@@ -64,34 +64,10 @@ public class DBConnector {
 		return users;
 	}
 
-	public MenuCard selectFoodMenu() {
-		MenuCard foodMenu = new MenuCard();
+	public MenuCard selectMenuCard() {
+		MenuCard menuCard = new MenuCard();
 
-		String query = "select * from foodMenu";
-
-		try {
-			Statement statement = conn.createStatement();
-			ResultSet rs = statement.executeQuery(query);
-
-			while (rs.next()) {
-				int menuItemID = rs.getInt("menuItemID");
-				String itemName = rs.getString("itemName");
-				String category = rs.getString("category");
-				double price = rs.getDouble("price");
-
-				foodMenu.getMenuItems().add(new Dish(menuItemID, itemName, category, price));
-			}
-
-		} catch (SQLException e) {
-			throw new RuntimeException(e);
-		}
-		return foodMenu;
-	}
-
-	public MenuCard selectdessertMenu() {
-		MenuCard dessertMenu = new MenuCard();
-
-		String query = "select * from dessertMenu";
+		String query = "select * from menuCard";
 
 		try {
 			Statement statement = conn.createStatement();
@@ -103,37 +79,52 @@ public class DBConnector {
 				String category = rs.getString("category");
 				double price = rs.getDouble("price");
 
-				dessertMenu.getMenuItems().add(new Dish(menuItemID, itemName, category, price));
+				menuCard.getMenuItems().add(new Dish(menuItemID, itemName, category, price));
 			}
 
 		} catch (SQLException e) {
 			throw new RuntimeException(e);
 		}
-		return dessertMenu;
+		return menuCard;
 	}
 
-	public MenuCard selectdrinksMenu() {
-		MenuCard drinksMenu = new MenuCard();
 
-		String query = "select * from drinkMenu";
+	public void insertOrdre(Order order) {
+		String query = "INSERT INTO OrderDetails ( orderID, orderDate, orderTime,itemID) VALUES ( ?, ? ,?,?)";
 
 		try {
-			Statement statement = conn.createStatement();
-			ResultSet rs = statement.executeQuery(query);
+			PreparedStatement pr = conn.prepareStatement(query);
+			pr.setLong(1, order.getOrderID());
+			pr.setString(2, order.getOrderDate().toString());
+			pr.setString(3, order.getOrderTime().toString());
+			pr.setDouble(4, order.getMenuID());
 
-			while (rs.next()) {
-				int menuItemID = rs.getInt("menuItemID");
-				String itemName = rs.getString("itemName");
-				String category = rs.getString("category");
-				double price = rs.getDouble("price");
-
-				drinksMenu.getMenuItems().add(new Drink(menuItemID, itemName, category, price));
-			}
-
+			pr.executeUpdate();
+			//System.out.println("Inserted virker");
 		} catch (SQLException e) {
 			throw new RuntimeException(e);
 		}
-		return drinksMenu;
 	}
+
+
+	public void insertInvoice(Invoice invoice) {
+		String query = "INSERT INTO Invoice (InvoiceDate, InvoiceTime , amount ,orderID ) VALUES ( ?, ?,?, ?)";
+
+		try {
+			PreparedStatement pr = conn.prepareStatement(query);
+			pr.setString(1, invoice.getDate().toString());
+			pr.setString(2, invoice.getTime().toString());
+			pr.setDouble(3, invoice.getTotalAmount());
+			pr.setLong(4, invoice.getOrderID());
+
+
+
+			pr.executeUpdate();
+			//System.out.println("Inserted virker");
+		} catch (SQLException e) {
+			throw new RuntimeException(e);
+		}
+	}
+
 
 }

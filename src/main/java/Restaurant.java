@@ -5,9 +5,9 @@ import java.util.ArrayList;
 public class Restaurant {
 	public static ArrayList<User> users;
 	public static ArrayList<Table> tables;
-	public static MenuCard foodMenu;
-	public static MenuCard dessertMenu;
-	public static MenuCard drinksMenu;
+	public static MenuCard menuCard;
+	//public static MenuCard dessertMenu;
+	//public static MenuCard drinksMenu;
 	public static Menu userMenu;
 	public static DBConnector dbConnector;
 
@@ -22,9 +22,9 @@ public class Restaurant {
 		dbConnector.connect("jdbc:sqlite:restaurantData.sqlite");
 		users = dbConnector.selectUser();
 		tables = dbConnector.selectTable();
-		foodMenu = dbConnector.selectFoodMenu();
-		dessertMenu = dbConnector.selectdessertMenu();
-		drinksMenu = dbConnector.selectdrinksMenu();
+		menuCard = dbConnector.selectMenuCard();
+		// dessertMenu = dbConnector.selectdessertMenu();
+		// drinksMenu = dbConnector.selectdrinksMenu();
 		userMenu = new WaiterMenu(tables);
 	}
 
