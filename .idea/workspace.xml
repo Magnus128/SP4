@@ -4,31 +4,17 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="8f632976-210e-49ac-8840-8d3c8f12b369" name="Changes" comment="codewithme">
-      <change afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/restaurantData.sqlite" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/DBConnector.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/Position.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/klasseDiagram.puml" beforeDir="false" afterPath="$PROJECT_DIR$/docs/klasseDiagram.puml" afterDir="false" />
+    <list default="true" id="8f632976-210e-49ac-8840-8d3c8f12b369" name="Changes" comment="database">
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/DBConnector.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/DBConnector.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/Dish.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Dish.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Item.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Item.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/KitchenMenu.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/KitchenMenu.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Drink.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Drink.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ManagerMenu.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ManagerMenu.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Menu.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Menu.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/MenuCard.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/MenuCard.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/User.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Restaurant.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Restaurant.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/WaiterMenu.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/WaiterMenu.java" afterDir="false" />
     </list>
-    <list id="d5e5d773-06f5-4771-9dd5-b4e6f4f665e4" name="Changes by admin" comment="">
-      <change beforePath="$PROJECT_DIR$/src/main/java/Order.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Order.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Reservation.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Reservation.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Table.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Table.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/User.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/WaiterMenu.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/WaiterMenu.java" afterDir="false" />
-    </list>
-    <list id="a9b5724f-b6cc-463a-adce-ac0a97d6b905" name="Changes by fgoc" comment="" />
+    <list id="d5e5d773-06f5-4771-9dd5-b4e6f4f665e4" name="Changes by admin" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -60,26 +46,8 @@
     &quot;accountId&quot;: &quot;006ad53a-fe3c-458b-b3a1-34ce1fe30b49&quot;
   }
 }</component>
-  <component name="LineStatusTrackerManager">
-    <file path="$PROJECT_DIR$/src/main/java/WaiterMenu.java">
-      <ranges>
-        <range start1="6" end1="8" start2="6" end2="8" changelist="8f632976-210e-49ac-8840-8d3c8f12b369" />
-        <range start1="13" end1="13" start2="13" end2="25" changelist="8f632976-210e-49ac-8840-8d3c8f12b369" />
-        <range start1="16" end1="16" start2="28" end2="32" changelist="8f632976-210e-49ac-8840-8d3c8f12b369" />
-        <range start1="18" end1="19" start2="34" end2="39" changelist="8f632976-210e-49ac-8840-8d3c8f12b369" />
-        <range start1="22" end1="22" start2="42" end2="43" changelist="8f632976-210e-49ac-8840-8d3c8f12b369" />
-        <range start1="25" end1="25" start2="46" end2="49" changelist="d5e5d773-06f5-4771-9dd5-b4e6f4f665e4" />
-        <range start1="28" end1="29" start2="52" end2="52" changelist="8f632976-210e-49ac-8840-8d3c8f12b369" />
-        <range start1="32" end1="33" start2="55" end2="55" changelist="8f632976-210e-49ac-8840-8d3c8f12b369" />
-      </ranges>
-    </file>
-    <file path="$PROJECT_DIR$/src/main/java/User.java">
-      <ranges>
-        <range start1="5" end1="6" start2="5" end2="6" changelist="8f632976-210e-49ac-8840-8d3c8f12b369" />
-        <range start1="7" end1="8" start2="7" end2="8" changelist="8f632976-210e-49ac-8840-8d3c8f12b369" />
-        <range start1="13" end1="13" start2="13" end2="31" changelist="d5e5d773-06f5-4771-9dd5-b4e6f4f665e4" />
-      </ranges>
-    </file>
+  <component name="ProblemsViewState">
+    <option name="selectedTabId" value="CurrentFile" />
   </component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 6,
@@ -92,6 +60,8 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
+    "Application.Main.executor": "Run",
+    "Application.run.executor": "Run",
     "DefaultPlantUmlFileTemplate": "UML Class",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "RunOnceActivity.git.unshallow": "true",
@@ -102,7 +72,7 @@
     "ignore.virus.scanning.warn.message": "true",
     "kotlin-language-version-configured": "true",
     "nodejs_package_manager_path": "npm",
-    "project.structure.last.edited": "Modules",
+    "project.structure.last.edited": "Project",
     "project.structure.proportion": "0.0",
     "project.structure.side.proportion": "0.396",
     "settings.editor.selected.configurable": "preferences.pluginManager",
@@ -119,8 +89,19 @@
       <recent name="" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\Magnus\IdeaProjects\SP4\src\main\resources" />
       <recent name="C:\Users\Magnus\IdeaProjects\SP4\docs" />
     </key>
+  </component>
+  <component name="RunManager">
+    <configuration name="run" type="Application" factoryName="Application">
+      <option name="MAIN_CLASS_NAME" value="Main" />
+      <module name="SP4" />
+      <option name="VM_PARAMETERS" value="--enable-native-access=ALL-UNNAMED" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
   </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
@@ -134,7 +115,9 @@
       <workItem from="1778224826901" duration="68000" />
       <workItem from="1778488180045" duration="8876000" />
       <workItem from="1778571563936" duration="5585000" />
-      <workItem from="1778590495341" duration="5621000" />
+      <workItem from="1778590495341" duration="5726000" />
+      <workItem from="1778596305550" duration="224000" />
+      <workItem from="1778657499869" duration="1258000" />
     </task>
     <task id="LOCAL-00001" summary="punkt 1 og 2">
       <option name="closed" value="true" />
@@ -232,7 +215,15 @@
       <option name="project" value="LOCAL" />
       <updated>1778576673585</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="database">
+      <option name="closed" value="true" />
+      <created>1778596209198</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1778596209198</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -247,6 +238,7 @@
     <MESSAGE value="klasseDiagram" />
     <MESSAGE value="useCaseDiagram" />
     <MESSAGE value="codewithme" />
-    <option name="LAST_COMMIT_MESSAGE" value="codewithme" />
+    <MESSAGE value="database" />
+    <option name="LAST_COMMIT_MESSAGE" value="database" />
   </component>
 </project>

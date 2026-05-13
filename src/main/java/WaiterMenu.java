@@ -32,11 +32,11 @@ public class WaiterMenu extends Menu{
 	}
 
 	public void getAvailableTable() {
-		for(Table table : tables){
-			if(table.getId() == table.getId()){
-				table.addOrder(order);
-			}
-		}
+//		for(Table table : tables){
+//			if(table.getId() == table.getId()){
+//				table.addOrder(order);
+//			}
+//		}
 	}
 
 	public void addOrderToTable() {

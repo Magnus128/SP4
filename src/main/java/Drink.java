@@ -1,6 +1,6 @@
 public class Drink extends Item {
 
-	public Drink(String name, String description, double price, int calories) {
-		super(name, description, price, calories);
+	public Drink(int id, String name, String category, double price) {
+		super(id, name, category, price);
 	}
 }

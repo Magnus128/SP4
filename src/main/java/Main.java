@@ -6,21 +6,15 @@ public class Main {
 	static void main(String[] args) {
 
 		dbConnector.connect("jdbc:sqlite:restaurantData.sqlite");
-		Restaurant restaurant = initializeRestaurant();
+		Restaurant restaurant = start();
 
 		restaurant.getUserMenu().show();
 	}
 
-	private static Restaurant initializeRestaurant() {
-		// Henter data fra databasen
-		ArrayList<User> users = dbConnector.selectUser();
-		ArrayList<Table> tables = dbConnector.selectTable();
-		MenuCard foodMenu = dbConnector.selectFoodMenu();
-		MenuCard dessertMenu = null;
-		MenuCard drinksMenu = null;
-		Menu userMenu = new WaiterMenu(tables);
+	private static Restaurant start() {
 
-		// Initialiserer et Restaurant-objekt med de data
-		return new Restaurant(users, tables, foodMenu, dessertMenu, drinksMenu, userMenu);
+		Restaurant restaurant = new Restaurant();
+		restaurant.initialize();
+		return restaurant;
 	}
 }

@@ -52,7 +52,7 @@ public class DBConnector {
 				int userID = rs.getInt("id");
 				String userName = rs.getString("firstName");
 				userName += " " + rs.getString("lastName");
-				Position position = Position.valueOf(rs.getString("position"));
+				Position position = Position.valueOf(rs.getString("position").toUpperCase().replace(" ", ""));
 				double salary = rs.getDouble("salary");
 
 				users.add(new User(userID, userName, salary, position));
