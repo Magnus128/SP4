@@ -15,4 +15,8 @@ public abstract class Menu {
 	public abstract void hide();
 
 	public abstract void navigate();
+
+	public void setActiveOrders(ArrayList<Order> activeOrders) {
+		this.activeOrders = activeOrders;
+	}
 }

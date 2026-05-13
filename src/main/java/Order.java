@@ -63,13 +63,19 @@ public class Order {
 		return null;
 	}
 
+	public void setOrderstatus(OrderStatus orderstatus) {
+		this.orderstatus = orderstatus;
+	}
+
 	@Override
 	public String toString() {
 		return String.format(
-				"%-15s %-20s %-10.2f %-15s %-10s",
+				"%-10s %-15s %-20s %-10.2f %-10s %-15s %-10s",
+				getMenuID(),
 				category,
 				getMenuName(),
 				price,
+				orderstatus,
 				orderDate,
 				orderTime.getHour() + ":" + orderTime.getMinute()
 		);

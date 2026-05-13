@@ -58,7 +58,7 @@ public class WaiterMenu extends Menu{
 				getInvoice(table);
 				break;
 			case 6:
-				show();
+				Restaurant.ChooseMenu().show();
 				break;
 			default:
 				showDetails(table);
@@ -97,6 +97,7 @@ public class WaiterMenu extends Menu{
 
 		// Order transaktioner
 		Order order = new Order(table.getOrderNo(), table.getId(), item.getCategory(), item.getId(), item.getPrice(), OrderStatus.ACTIVE);
+		activeOrders.add(order);
 		order.setOrderDate(LocalDate.now());
 		order.setOrderTime(LocalDateTime.now());
 
