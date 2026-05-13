@@ -87,4 +87,12 @@ public class DBConnector {
 		}
 		return foodMenu;
 	}
+
+	public MenuCard selectdessertMenu() {
+		return null;
+	}
+
+	public MenuCard selectdrinksMenu() {
+		return null;
+	}
 }
