@@ -2,6 +2,7 @@ import java.time.LocalDateTime;
 import java.util.ArrayList;
 
 public class Table {
+	private Reservation reservation;
 	private int id;
 	private TableStatus status;
 	private int seats;
@@ -41,4 +42,8 @@ public class Table {
 	public int getSeats(){return seats;}
 
 	public ArrayList<Order> getOrders(){return orders;}
+
+	public void setReservation(Reservation reservation){this.reservation = reservation;}
+
+	public Reservation getReservation(){return reservation;}
 }
