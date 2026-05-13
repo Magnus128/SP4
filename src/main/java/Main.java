@@ -1,14 +1,11 @@
 import java.util.ArrayList;
 
 public class Main {
-	private static DBConnector dbConnector = new DBConnector();
-
 	static void main(String[] args) {
 
-		dbConnector.connect("jdbc:sqlite:restaurantData.sqlite");
 		Restaurant restaurant = start();
+		restaurant.ChooseMenu().show();
 
-		restaurant.getUserMenu().show();
 	}
 
 	private static Restaurant start() {
@@ -18,3 +15,5 @@ public class Main {
 		return restaurant;
 	}
 }
+
+

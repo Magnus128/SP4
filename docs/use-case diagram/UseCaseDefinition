@@ -1,0 +1,76 @@
+
+UC1 - Menu Management (Manager)
+----------------
+Manage Menu Card
+Create Menu Item
+Delete Menu Item
+Edit Menu Item
+Manage Campaigns
+
+Info : MenuCard eller Item kræver også en SQL-tabel.
+
+==============================================================
+
+UC2 Waiter Panel
+----------------
+Manage Table (View Reservations, Orders - Move Table - Get Available Table, Busy Table )
+Add Order to Table
+Remove Order from Table
+Add Notes to Order
+Generate Invoice
+Create Reservation  --> Tabel status skal ændres, efter produkter er tilføjet.
+
+Info : Order og Invoice kræver også en SQL-tabel.
+
+==============================================================
+
+UC3 - Rapports (Manager)
+----------------
+View Daily Turnover
+View Monthly Turnover
+View Best Selling Items
+
+info : Dataene hentes fra en SQL-tabel. ( Order, Invoice )
+
+==============================================================
+
+UC4 - Session management (System Klasse)
+----------------
+Users - Roller (Manager,Waiter,Kitchen Staff)
+Menufunktioner
+
+==============================================================
+
+UC5 Kitchen Panel
+-----------------
+View Active Orders - Delayed Orders
+Update Order Status
+Add Notes
+Mark as ready
+
+==============================================================
+
+UC6 - Manage Inventory (Manager)
+-----------------
+Create Inventory
+View Inventory Status
+Create Shopping List
+
+Info :
+Inventory kan kræve også en SQL-tabel. ( stock, minStock )
+Hvis lagerbeholdningen er mindre end minimumslageret, oprettes indkøbslisten automatisk.
+
+==============================================================
+
+UC8 - Manage Staff (Manager)
+-----------------
+Create Staff (employee,roles,shift schedule,salary information)
+View Employee Performance
+
+Employees kan også være en SQL-tabel.
+
+
+
+
+
+
