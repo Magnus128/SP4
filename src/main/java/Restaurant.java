@@ -22,7 +22,7 @@ public class Restaurant {
 		dbConnector.connect("jdbc:sqlite:restaurantData.sqlite");
 		users = dbConnector.selectUser();
 		tables = dbConnector.selectTable();
-		foodMenu = dbConnector.selectFoodMenu();
+		foodMenu = dbConnector.selectMenuCard();
 		dessertMenu = dbConnector.selectdessertMenu();
 		drinksMenu = dbConnector.selectdrinksMenu();
 		userMenu = new WaiterMenu(tables);

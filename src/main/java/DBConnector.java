@@ -64,10 +64,10 @@ public class DBConnector {
 		return users;
 	}
 
-	public MenuCard selectFoodMenu() {
-		MenuCard foodMenu = new MenuCard();
+	public MenuCard selectMenuCard() {
+		MenuCard menuCard = new MenuCard();
 
-		String query = "select * from foodMenu";
+		String query = "select * from menuCard";
 
 		try {
 			Statement statement = conn.createStatement();
@@ -79,20 +79,21 @@ public class DBConnector {
 				String category = rs.getString("category");
 				double price = rs.getDouble("price");
 
-				foodMenu.getMenuItems().add(new Dish(menuItemID, itemName, category, price));
+				menuCard.getMenuItems().add(new Dish(menuItemID, itemName, category, price));
 			}
 
 		} catch (SQLException e) {
 			throw new RuntimeException(e);
 		}
-		return foodMenu;
+		return menuCard;
 	}
 
-	public MenuCard selectdessertMenu() {
-		return null;
+	public double selectDailyRevenue(String day) {
+		double revenue = 0;
+
+		String query = "select "
+
+		return revenue;
 	}
 
-	public MenuCard selectdrinksMenu() {
-		return null;
-	}
 }
