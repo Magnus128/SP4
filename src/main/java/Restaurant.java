@@ -25,6 +25,7 @@ public class Restaurant {
 
 	public void initialize() {
 		// Henter data fra databasen
+		dbConnector.connect("jdbc:sqlite:restaurantData.sqlite");
 		users = dbConnector.selectUser();
 		tables = dbConnector.selectTable();
 		foodMenu = dbConnector.selectFoodMenu();

@@ -46,4 +46,13 @@ public class Table {
 	public void setReservation(Reservation reservation){this.reservation = reservation;}
 
 	public Reservation getReservation(){return reservation;}
+
+	@Override
+	public String toString() {
+		return "Table{" +
+				"id=" + id +
+				", status=" + status +
+				", seats=" + seats +
+				'}';
+	}
 }
