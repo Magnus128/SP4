@@ -11,5 +11,12 @@ public class Customer {
 		this.reviews = new ArrayList<>();
 	}
 
-
+	@Override
+	public String toString() {
+		return "Customer{" +
+				"name='" + name + '\'' +
+				", phoneNumber='" + phoneNumber + '\'' +
+				", reviews=" + reviews +
+				'}';
+	}
 }

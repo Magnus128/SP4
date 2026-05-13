@@ -36,4 +36,17 @@ public class Restaurant {
 	public Menu getUserMenu() {
 		return userMenu;
 	}
+
+	@Override
+	public String toString() {
+		return "Restaurant{" +
+				"users=" + users +
+				", tables=" + tables +
+				", foodMenu=" + foodMenu +
+				", dessertMenu=" + dessertMenu +
+				", drinksMenu=" + drinksMenu +
+				", userMenu=" + userMenu +
+				", dbConnector=" + dbConnector +
+				'}';
+	}
 }
