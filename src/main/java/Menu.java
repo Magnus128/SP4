@@ -15,4 +15,12 @@ public abstract class Menu {
 	public abstract void hide();
 
 	public abstract void navigate();
+
+	@Override
+	public String toString() {
+		return "Menu{" +
+				"isVisible=" + isVisible +
+				", activeOrders=" + activeOrders +
+				'}';
+	}
 }

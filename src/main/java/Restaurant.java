@@ -1,5 +1,3 @@
-import util.TextUI;
-
 import java.util.ArrayList;
 
 public class Restaurant {
@@ -50,4 +48,17 @@ public class Restaurant {
 
 
 
+
+	@Override
+	public String toString() {
+		return "Restaurant{" +
+				"users=" + users +
+				", tables=" + tables +
+				", foodMenu=" + foodMenu +
+				", dessertMenu=" + dessertMenu +
+				", drinksMenu=" + drinksMenu +
+				", userMenu=" + userMenu +
+				", dbConnector=" + dbConnector +
+				'}';
+	}
 }

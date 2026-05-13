@@ -1,0 +1,407 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="8f632976-210e-49ac-8840-8d3c8f12b369" name="Changes" comment="KitchenMenu">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    </list>
+    <list id="d5e5d773-06f5-4771-9dd5-b4e6f4f665e4" name="Changes by admin" comment="" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="CopilotChats">
+    <option name="panelChat">
+      <chat>
+        <option name="activeSessionId" value="d19051c3-721b-4f42-894a-6f721485e1dd" />
+        <option name="sessions">
+          <session>
+            <option name="chatType" value="PANEL" />
+            <option name="id" value="abbf54ab-ed9c-4e0c-83d6-55633e150fc7" />
+            <option name="modeId" value="Ask" />
+            <option name="modelType" value="builtin_family" />
+            <option name="modelValue" value="auto" />
+            <option name="status" value="Completed" />
+            <option name="targetType" value="LOCAL" />
+          </session>
+          <session>
+            <option name="chatType" value="PANEL" />
+            <option name="id" value="6cbd0412-6414-4a2f-b7b6-ad8ac5551c23" />
+            <option name="modeId" value="Ask" />
+            <option name="modelType" value="builtin_family" />
+            <option name="modelValue" value="auto" />
+            <option name="targetType" value="LOCAL" />
+          </session>
+          <session>
+            <option name="chatType" value="PANEL" />
+            <option name="id" value="a5b94c45-eeef-425e-ba1c-8a5d7b16e19a" />
+            <option name="modeId" value="Ask" />
+            <option name="modelType" value="builtin_family" />
+            <option name="modelValue" value="auto" />
+            <option name="status" value="Completed" />
+            <option name="targetType" value="LOCAL" />
+          </session>
+          <session>
+            <option name="chatType" value="PANEL" />
+            <option name="id" value="d19051c3-721b-4f42-894a-6f721485e1dd" />
+            <option name="modeId" value="Ask" />
+            <option name="modelType" value="builtin_family" />
+            <option name="modelValue" value="auto" />
+            <option name="targetType" value="LOCAL" />
+          </session>
+        </option>
+        <option name="type" value="PANEL" />
+      </chat>
+    </option>
+  </component>
+  <component name="CopilotPersistence">
+    <persistenceIdMap>
+      <entry key="_/Users/admin/Desktop/1. Semester/SP4 Restaurant Management System" value="3DO9500JKcqYP15V3qgH9o64Cn7" />
+    </persistenceIdMap>
+  </component>
+  <component name="CopilotUserSelectedModel">
+    <selectedModels>
+      <entry key="agent-panel" value="Auto" />
+      <entry key="chat-panel" value="Auto" />
+    </selectedModels>
+  </component>
+  <component name="EmbeddingIndexingInfo">
+    <option name="cachedIndexableFilesCount" value="53" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="UML Use Case" />
+        <option value="UML Object" />
+        <option value="UML Class" />
+        <option value="Enum" />
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="main" />
+      </map>
+    </option>
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;Magnus128&quot;
+  }
+}</component>
+  <component name="GithubPullRequestsUISettings"><![CDATA[{
+  "selectedUrlAndAccountId": {
+    "url": "https://github.com/Magnus128/SP4.git",
+    "accountId": "b8d4ffc3-5398-4ddc-99a1-a1b0ac94c0e3"
+  }
+}]]></component>
+  <component name="McpProjectServerCommands">
+    <commands />
+    <urls />
+  </component>
+  <component name="NextEditCompletionFeaturesState">
+    <decayedCancelled>
+      <entry key="MS100" value="1.1899075752900222E-16" />
+      <entry key="MS500" value="6.532849388604062E-4" />
+      <entry key="S2" value="0.15987319766821748" />
+      <entry key="S5" value="0.4803386523190183" />
+      <entry key="S10" value="0.7020344356616672" />
+      <entry key="S30" value="1.4373742975919606" />
+      <entry key="S60" value="3.1762027766013063" />
+      <entry key="M2" value="6.2249755852549535" />
+      <entry key="M5" value="10.623146154888595" />
+      <entry key="M10" value="14.568992452625992" />
+      <entry key="M15" value="18.75150196080991" />
+      <entry key="M30" value="32.55756069228121" />
+      <entry key="H1" value="52.84420562550446" />
+      <entry key="H2" value="72.04355724701864" />
+      <entry key="H4" value="85.63169826228695" />
+      <entry key="D1" value="99.79612803363139" />
+      <entry key="W1" value="102.5340314915729" />
+    </decayedCancelled>
+    <decayedSelected>
+      <entry key="MS100" value="1.0" />
+      <entry key="MS500" value="1.0" />
+      <entry key="S2" value="1.000000001242588" />
+      <entry key="S5" value="1.0004510108619153" />
+      <entry key="S10" value="1.0439112916453013" />
+      <entry key="S30" value="2.696528735608371" />
+      <entry key="S60" value="6.587914583040754" />
+      <entry key="M2" value="12.25117457948449" />
+      <entry key="M5" value="19.862779566930474" />
+      <entry key="M10" value="27.567546670829685" />
+      <entry key="M15" value="35.77002436786878" />
+      <entry key="M30" value="62.43593803922014" />
+      <entry key="H1" value="102.56632729856543" />
+      <entry key="H2" value="141.58901726315776" />
+      <entry key="H4" value="169.67032845091097" />
+      <entry key="D1" value="199.26598657997573" />
+      <entry key="W1" value="205.01976409117185" />
+    </decayedSelected>
+    <decayedShown>
+      <entry key="MS100" value="3.265610893502814E-9" />
+      <entry key="MS500" value="0.020717651341984" />
+      <entry key="S2" value="0.5352660375333312" />
+      <entry key="S5" value="1.1559808722326044" />
+      <entry key="S10" value="1.5634657433600763" />
+      <entry key="S30" value="3.9993475690469285" />
+      <entry key="S60" value="9.604371926819525" />
+      <entry key="M2" value="18.328454076416527" />
+      <entry key="M5" value="30.393187225926155" />
+      <entry key="M10" value="42.07604360211317" />
+      <entry key="M15" value="54.470915454097586" />
+      <entry key="M30" value="94.95053502244225" />
+      <entry key="H1" value="155.37553790664222" />
+      <entry key="H2" value="213.608505624719" />
+      <entry key="H4" value="255.28763152530618" />
+      <entry key="D1" value="299.05930130633413" />
+      <entry key="W1" value="307.55338218952255" />
+    </decayedShown>
+  </component>
+  <component name="ProblemsViewState">
+    <option name="selectedTabId" value="CurrentFile" />
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 6,
+  &quot;fromUser&quot;: false
+}</component>
+  <component name="ProjectId" id="3DO9500JKcqYP15V3qgH9o64Cn7" />
+  <component name="ProjectSessionTemplates">
+    <option name="panelTemplate">
+      <template>
+        <option name="modeId" value="Ask" />
+        <option name="model">
+          <model>
+            <option name="modelType" value="builtin_family" />
+            <option name="modelValue" value="auto" />
+          </model>
+        </option>
+        <option name="targetType" value="LOCAL" />
+      </template>
+    </option>
+  </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Application.Main.executor": "Run",
+    "Application.run.executor": "Run",
+    "DefaultPlantUmlFileTemplate": "UML Class",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "RunOnceActivity.typescript.service.memoryLimit.init": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "codeWithMe.voiceChat.enabledByDefault": "false",
+    "git-widget-placeholder": "mk2",
+    "ignore.virus.scanning.warn.message": "true",
+    "kotlin-language-version-configured": "true",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "project.structure.last.edited": "Project",
+    "project.structure.proportion": "0.0",
+    "project.structure.side.proportion": "0.396",
+    "settings.editor.selected.configurable": "preferences.pluginManager",
+    "vue.rearranger.settings.migration": "true"
+  },
+  "keyToStringList": {
+    "DatabaseDriversLRU": [
+      "sqlite"
+    ]
+  }
+}]]></component>
+  <component name="RecentsManager">
+    <key name="CreateClassDialog.RecentsKey">
+      <recent name="" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\Magnus\IdeaProjects\SP4\src\main\resources" />
+      <recent name="C:\Users\Magnus\IdeaProjects\SP4\docs" />
+    </key>
+  </component>
+  <component name="RunManager">
+    <configuration name="run" type="Application" factoryName="Application">
+      <option name="MAIN_CLASS_NAME" value="Main" />
+      <module name="SP4JDBC" />
+      <option name="VM_PARAMETERS" value="--enable-native-access=ALL-UNNAMED" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="8f632976-210e-49ac-8840-8d3c8f12b369" name="Changes" comment="" />
+      <created>1778142062692</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1778142062692</updated>
+      <workItem from="1778142064637" duration="2131000" />
+      <workItem from="1778144222150" duration="760000" />
+      <workItem from="1778224826901" duration="68000" />
+      <workItem from="1778488180045" duration="8876000" />
+      <workItem from="1778571563936" duration="5585000" />
+      <workItem from="1778590495341" duration="5726000" />
+      <workItem from="1778596305550" duration="224000" />
+      <workItem from="1778657499869" duration="1258000" />
+    </task>
+    <task id="LOCAL-00001" summary="punkt 1 og 2">
+      <option name="closed" value="true" />
+      <created>1778143635199</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1778143635199</updated>
+    </task>
+    <task id="LOCAL-00002" summary="maven">
+      <option name="closed" value="true" />
+      <created>1778144346164</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1778144346164</updated>
+    </task>
+    <task id="LOCAL-00003" summary="useCaseDiagram.puml">
+      <option name="closed" value="true" />
+      <created>1778224880115</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1778224880115</updated>
+    </task>
+    <task id="LOCAL-00004" summary="useCaseDiagrams">
+      <option name="closed" value="true" />
+      <created>1778488515965</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1778488515965</updated>
+    </task>
+    <task id="LOCAL-00005" summary="useCaseDiagrams">
+      <option name="closed" value="true" />
+      <created>1778489093737</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1778489093737</updated>
+    </task>
+    <task id="LOCAL-00006" summary="domæneModel">
+      <option name="closed" value="true" />
+      <created>1778491814261</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1778491814261</updated>
+    </task>
+    <task id="LOCAL-00007" summary="klasseDiagram">
+      <option name="closed" value="true" />
+      <created>1778493164072</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1778493164072</updated>
+    </task>
+    <task id="LOCAL-00008" summary="klasseDiagram">
+      <option name="closed" value="true" />
+      <created>1778494030204</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1778494030204</updated>
+    </task>
+    <task id="LOCAL-00009" summary="klasseDiagram">
+      <option name="closed" value="true" />
+      <created>1778495975932</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1778495975932</updated>
+    </task>
+    <task id="LOCAL-00010" summary="klasseDiagram">
+      <option name="closed" value="true" />
+      <created>1778496704630</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1778496704630</updated>
+    </task>
+    <task id="LOCAL-00011" summary="useCaseDiagram">
+      <option name="closed" value="true" />
+      <created>1778496926346</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1778496926346</updated>
+    </task>
+    <task id="LOCAL-00012" summary="codewithme">
+      <option name="closed" value="true" />
+      <created>1778576673585</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1778576673585</updated>
+    </task>
+    <task id="LOCAL-00013" summary="database">
+      <option name="closed" value="true" />
+      <created>1778596209198</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1778596209198</updated>
+    </task>
+    <task id="LOCAL-00014" summary="Text UI">
+      <option name="closed" value="true" />
+      <created>1778664461448</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1778664461448</updated>
+    </task>
+    <task id="LOCAL-00015" summary="KitchenMenu">
+      <option name="closed" value="true" />
+      <created>1778668336291</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1778668336291</updated>
+    </task>
+    <option name="localTasksCounter" value="16" />
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="punkt 1 og 2" />
+    <MESSAGE value="maven" />
+    <MESSAGE value="useCaseDiagram.puml" />
+    <MESSAGE value="useCaseDiagrams" />
+    <MESSAGE value="domæneModel" />
+    <MESSAGE value="klasseDiagram" />
+    <MESSAGE value="useCaseDiagram" />
+    <MESSAGE value="codewithme" />
+    <MESSAGE value="database" />
+    <MESSAGE value="Text UI" />
+    <MESSAGE value="KitchenMenu" />
+    <option name="LAST_COMMIT_MESSAGE" value="KitchenMenu" />
+  </component>
+  <component name="github-copilot-workspace">
+    <instructionFileLocations>
+      <option value=".github/instructions" />
+    </instructionFileLocations>
+    <promptFileLocations>
+      <option value=".github/prompts" />
+    </promptFileLocations>
+  </component>
+</project>
