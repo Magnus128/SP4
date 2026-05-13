@@ -4,8 +4,8 @@ public class Main {
 	static void main(String[] args) {
 
 		Restaurant restaurant = start();
+		restaurant.ChooseMenu().show();
 
-		restaurant.getUserMenu().show();
 	}
 
 	private static Restaurant start() {
@@ -15,3 +15,5 @@ public class Main {
 		return restaurant;
 	}
 }
+
+
