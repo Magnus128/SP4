@@ -1,6 +1,7 @@
+import processing.core.PApplet;
 import util.TextUI;
 
-import java.time.Instant;
+
 import java.time.LocalDate;
 import java.time.LocalDateTime;
 import java.util.ArrayList;
@@ -8,15 +9,26 @@ import java.util.ArrayList;
 public class WaiterMenu extends Menu{
 
 	ArrayList<Table> tables;
+	String[] args = {"WaiterDashboard"};
+	WaiterDashboard sketch;
 
 	public WaiterMenu(ArrayList<Table> tables) {
 		super();
 		this.tables = tables;
+
+
 	}
 
 	@Override
 	public void show() {
 		super.isVisible = true;
+
+		// Waiter Skærm
+		if (sketch == null) {
+			sketch = new WaiterDashboard();
+			PApplet.runSketch(args, sketch);
+		}
+
 
 		// Viser all tables
 		for(Table table : tables){
@@ -35,6 +47,7 @@ public class WaiterMenu extends Menu{
 	}
 
 	private void showDetails(Table table) {
+
 
 		genererOrderNo();							// 	Dette blev gjort, så det samme ordre-ID bruges på både fakturaen og ordren.
 
@@ -58,6 +71,7 @@ public class WaiterMenu extends Menu{
 				getInvoice(table);
 				break;
 			case 6:
+				hide();
 				Restaurant.ChooseMenu().show();
 				break;
 			default:
@@ -148,7 +162,7 @@ public class WaiterMenu extends Menu{
 			System.out.println(table.getId() + ".table is not suitable");	// Det er ikke muligt at reservere aktive borde.
 			TextUI.displayMsg("=============================");
 		}
-
+		hide();
 		Restaurant.userMenu.show();
 	}
 
@@ -180,6 +194,7 @@ public class WaiterMenu extends Menu{
 			invoice.printInvoice();
 
 			// Fakturaer og ordrer gemmes i databasen.
+			table.getOrders().clear();
 			Restaurant.dbConnector.insertInvoice(invoice);
 
 		}
@@ -189,9 +204,11 @@ public class WaiterMenu extends Menu{
 	private void genererOrderNo() {
 
 		// en unik værdi skabes
+		int count = 0;
 		for (Table table : tables) {
-			long unix = Instant.now().getEpochSecond();   // for unik
 			if (table.getOrderNo() == 0) {
+				long unix = System.currentTimeMillis() / 1000000 + count++;  // for unik
+				//System.out.println(unix);
 				table.setOrderNo(unix);
 			}
 		}
@@ -200,11 +217,22 @@ public class WaiterMenu extends Menu{
 
 	@Override
 	public void navigate() {
-		//
+
 	}
 
 	@Override
 	public void hide() {
+		if (sketch != null) {
+
+			sketch.noLoop();
+
+			sketch.getSurface().setVisible(false);
+
+			sketch.dispose();
+
+			sketch = null;
+		}
+
 
 	}
 
