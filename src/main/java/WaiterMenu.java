@@ -15,7 +15,7 @@ public class WaiterMenu extends Menu{
 	public WaiterMenu(ArrayList<Table> tables) {
 		super();
 		this.tables = tables;
-
+		//
 
 	}
 
