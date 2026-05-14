@@ -126,7 +126,14 @@ public class DBConnector {
 	public double selectDailyRevenue(String day) {
 		double revenue = 0;
 
-		String query = "select sum(price)";
+		String query = "SELECT SUM(totalBill) FROM Invoices WHERE orderDate = ?";
+
+		try {
+			Statement statement = conn.createStatement();
+			ResultSet rs = statement.executeQuery(query);
+		} catch (SQLException e) {
+			throw new RuntimeException(e);
+		}
 
 		return revenue;
 	}
