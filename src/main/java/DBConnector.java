@@ -88,6 +88,37 @@ public class DBConnector {
 		return menuCard;
 	}
 
+
+	public void insertOrdre(Order order) {
+		String query = "INSERT INTO OrderDetails ( orderID, orderDate, orderTime,itemID) VALUES ( ?, ? ,?,?)";
+
+		try {
+			PreparedStatement pr = conn.prepareStatement(query);
+			pr.setLong(1, order.getOrderID());
+			pr.setString(2, order.getOrderDate().toString());
+			pr.setString(3, order.getOrderTime().toString());
+			pr.setDouble(4, order.getMenuID());
+
+			pr.executeUpdate();
+			//System.out.println("Inserted virker");
+		} catch (SQLException e) {
+			throw new RuntimeException(e);
+		}
+		return menuCard;
+	}
+
+
+	public void insertInvoice(Invoice invoice) {
+		String query = "INSERT INTO Invoice (InvoiceDate, InvoiceTime , amount ,orderID ) VALUES ( ?, ?,?, ?)";
+
+		try {
+			PreparedStatement pr = conn.prepareStatement(query);
+			pr.setString(1, invoice.getDate().toString());
+			pr.setString(2, invoice.getTime().toString());
+			pr.setDouble(3, invoice.getTotalAmount());
+			pr.setLong(4, invoice.getOrderID());
+
+
 	public double selectDailyRevenue(String day) {
 		double revenue = 0;
 
@@ -95,5 +126,13 @@ public class DBConnector {
 
 		return revenue;
 	}
+
+			pr.executeUpdate();
+			//System.out.println("Inserted virker");
+		} catch (SQLException e) {
+			throw new RuntimeException(e);
+		}
+	}
+
 
 }

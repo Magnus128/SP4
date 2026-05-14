@@ -3,10 +3,12 @@ import java.util.ArrayList;
 public class Restaurant {
 	public static ArrayList<User> users;
 	public static ArrayList<Table> tables;
-	public static MenuCard foodMenu;
-	public static MenuCard dessertMenu;
-	public static MenuCard drinksMenu;
+	public static MenuCard menuCard;
+	//public static MenuCard dessertMenu;
+	//public static MenuCard drinksMenu;
 	public static Menu userMenu;
+	public static Menu managerMenu;
+	public static Menu kitchenMenu;
 	public static DBConnector dbConnector;
 
 	public Restaurant() {
@@ -20,26 +22,28 @@ public class Restaurant {
 		dbConnector.connect("jdbc:sqlite:restaurantData.sqlite");
 		users = dbConnector.selectUser();
 		tables = dbConnector.selectTable();
-		foodMenu = dbConnector.selectMenuCard();
-		dessertMenu = dbConnector.selectdessertMenu();
-		drinksMenu = dbConnector.selectdrinksMenu();
+		menuCard = dbConnector.selectMenuCard();
+		// dessertMenu = dbConnector.selectdessertMenu();
+		// drinksMenu = dbConnector.selectdrinksMenu();
 		userMenu = new WaiterMenu(tables);
+		managerMenu = new ManagerMenu();
+		kitchenMenu = new KitchenMenu();
+		kitchenMenu.setActiveOrders(userMenu.activeOrders);
+
 	}
 
-	public Menu getUserMenu() {
-		return userMenu;
-	}
 
-	public Menu ChooseMenu() {
+	public static Menu ChooseMenu() {
 
+		System.out.println("============ Restaurant Management System ============");
 		int input = TextUI.promptNumeric("1.Waiter\n2.Manager\n3.Kitchen Staff");
 
 		if (input == 1) {
-			return new WaiterMenu(tables);
+			return userMenu;
 		} else if (input == 2) {
-			return new ManagerMenu();
+			return managerMenu;
 		} else if (input == 3) {
-			return new KitchenMenu();
+			return kitchenMenu;
 		} else {
 			return ChooseMenu();
 		}
