@@ -126,15 +126,23 @@ public class DBConnector {
 	public double selectDailyRevenue(String day) {
 		double revenue = 0;
 
-		String query = "SELECT SUM(totalBill) FROM Invoices WHERE orderDate = ?";
 
 		try {
 			Statement statement = conn.createStatement();
+
+			// day skal være formateret som M/D/YY
+			String query = "SELECT SUM(totalBill) FROM Invoices WHERE orderDate = '" + day + "'";
+
 			ResultSet rs = statement.executeQuery(query);
+			if (rs.next()) {
+				revenue = rs.getDouble(0);
+			} else {
+				throw new IllegalArgumentException();
+			}
+			conn.close();
 		} catch (SQLException e) {
 			throw new RuntimeException(e);
 		}
-
 		return revenue;
 	}
 }
