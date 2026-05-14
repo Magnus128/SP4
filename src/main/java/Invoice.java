@@ -12,13 +12,12 @@ public class Invoice {
 	private long orderID;
 
 	public Invoice(ArrayList<Order> orders, double totalAmount) {
-		this.id = nextId++;  // Auto-generer id
-	public Invoice(ArrayList<Order> orders, double totalAmount) {
 		this.orders = orders;
 		this.totalAmount = totalAmount;
 		date = LocalDate.now();
 		time = LocalDateTime.now();
 		orderID = 0;
+		this.id = nextId++;  // Auto-generer id
 	}
 
 	public int getId() {
@@ -50,19 +49,8 @@ public class Invoice {
 	}
 
 	public void printInvoice() {
-
-	}
-
-	@Override
-	public String toString() {
-		return "Invoice{" +
-				"id=" + id +
-				", time=" + time +
-				", orders=" + orders +
-				", totalAmount=" + totalAmount +
-				'}';
 		System.out.println("=============================");
-		System.out.println("Table : " + orders.get(1).getTableID() + " - InvoiceNo : " + orderID);
+		System.out.println("Table : " + orders.getFirst().getTableID() + " - InvoiceNo : " + orderID);
 		System.out.println("=============================");
 		int i = 0;
 		for (Order order : orders) {
@@ -73,5 +61,13 @@ public class Invoice {
 		System.out.println("=============================");
 	}
 
-
+	@Override
+	public String toString() {
+		return "Invoice{" +
+				"id=" + id +
+				", time=" + time +
+				", orders=" + orders +
+				", totalAmount=" + totalAmount +
+				'}';
+	}
 }

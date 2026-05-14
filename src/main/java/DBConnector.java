@@ -104,28 +104,18 @@ public class DBConnector {
 		} catch (SQLException e) {
 			throw new RuntimeException(e);
 		}
-		return menuCard;
 	}
 
 
 	public void insertInvoice(Invoice invoice) {
-		String query = "INSERT INTO Invoice (InvoiceDate, InvoiceTime , amount ,orderID ) VALUES ( ?, ?,?, ?)";
+		String query = "INSERT INTO Invoices (orderID, orderDate, orderTime , totalBill) VALUES ( ?, ?, ?, ?)";
 
 		try {
 			PreparedStatement pr = conn.prepareStatement(query);
-			pr.setString(1, invoice.getDate().toString());
-			pr.setString(2, invoice.getTime().toString());
-			pr.setDouble(3, invoice.getTotalAmount());
-			pr.setLong(4, invoice.getOrderID());
-
-
-	public double selectDailyRevenue(String day) {
-		double revenue = 0;
-
-		String query = "select ";
-
-		return revenue;
-	}
+			pr.setLong(1, invoice.getOrderID());
+			pr.setString(2, invoice.getDate().toString());
+			pr.setString(3, invoice.getTime().toString());
+			pr.setDouble(4, invoice.getTotalAmount());
 
 			pr.executeUpdate();
 			//System.out.println("Inserted virker");
@@ -133,6 +123,11 @@ public class DBConnector {
 			throw new RuntimeException(e);
 		}
 	}
+	public double selectDailyRevenue(String day) {
+		double revenue = 0;
 
+		String query = "select ";
 
+		return revenue;
+	}
 }

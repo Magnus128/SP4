@@ -58,9 +58,7 @@ public class Restaurant {
 		return "Restaurant{" +
 				"users=" + users +
 				", tables=" + tables +
-				", foodMenu=" + foodMenu +
-				", dessertMenu=" + dessertMenu +
-				", drinksMenu=" + drinksMenu +
+				", menuCard=" + menuCard +
 				", userMenu=" + userMenu +
 				", dbConnector=" + dbConnector +
 				'}';

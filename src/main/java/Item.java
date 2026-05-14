@@ -17,17 +17,6 @@ public class Item {
 		this.price = price;
 	}
 
-	@Override
-	public String toString() {
-		return "Item{" +
-				"id=" + id +
-				", name='" + name + '\'' +
-				", category='" + category + '\'' +
-				", price=" + price +
-				", ingredients=" + ingredients +
-				'}';
-	}
-}
 	public int getId() {
 		return id;
 	}
@@ -58,4 +47,3 @@ public class Item {
 		);
 	}
 }
-
