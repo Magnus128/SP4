@@ -89,6 +89,8 @@ public class DBConnector {
 	}
 
 
+
+
 	public void insertOrdre(Order order) {
 		String query = "INSERT INTO OrderDetails ( orderID, orderDate, orderTime,itemID) VALUES ( ?, ? ,?,?)";
 

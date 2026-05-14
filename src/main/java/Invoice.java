@@ -49,7 +49,7 @@ public class Invoice {
 	public void printInvoice() {
 
 		System.out.println("=============================");
-		System.out.println("Table : " + orders.get(1).getTableID() + " - InvoiceNo : " + orderID);
+		System.out.println("Table : " + orders.getFirst().getTableID() + " - InvoiceNo : " + orderID);
 		System.out.println("=============================");
 		int i = 0;
 		for (Order order : orders) {
