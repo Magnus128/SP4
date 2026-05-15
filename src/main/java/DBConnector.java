@@ -1,10 +1,12 @@
 import java.sql.DriverManager;
+import java.time.format.DateTimeFormatter;
 import java.util.ArrayList;
 import java.sql.*;
 
 public class DBConnector {
 
 	Connection conn;
+	DateTimeFormatter formatter = DateTimeFormatter.ofPattern("HH:mm:ss");
 
 	public void connect(String url) {
 		try {
@@ -88,12 +90,59 @@ public class DBConnector {
 		return menuCard;
 	}
 
+
+	public void insertOrdre(Order order) {
+		String query = "INSERT INTO OrderDetails ( orderID, orderDate, orderTime,itemID) VALUES ( ?, ? ,?,?)";
+		try {
+			PreparedStatement pr = conn.prepareStatement(query);
+			pr.setLong(1, order.getOrderID());
+			pr.setString(2, order.getOrderDate().toString());
+			pr.setString(3, order.getOrderTime().format(formatter));
+			pr.setDouble(4, order.getMenuID());
+
+			pr.executeUpdate();
+			//System.out.println("Inserted virker");
+		} catch (SQLException e) {
+			throw new RuntimeException(e);
+		}
+	}
+
+
+	public void insertInvoice(Invoice invoice) {
+		String query = "INSERT INTO Invoices (orderID, orderDate, orderTime , totalBill) VALUES ( ?, ?, ?, ?)";
+
+		try {
+			PreparedStatement pr = conn.prepareStatement(query);
+			pr.setLong(1, invoice.getOrderID());
+			pr.setString(2, invoice.getDate().toString());
+			pr.setString(3, invoice.getTime().format(formatter));
+			pr.setDouble(4, invoice.getTotalAmount());
+
+			pr.executeUpdate();
+			//System.out.println("Inserted virker");
+		} catch (SQLException e) {
+			throw new RuntimeException(e);
+		}
+	}
 	public double selectDailyRevenue(String day) {
 		double revenue = 0;
 
-		String query = "select "
+		try {
+			Statement statement = conn.createStatement();
 
+			// day skal være formateret som YYYY-MM-DD
+			String query = "SELECT SUM(totalBill) FROM Invoices WHERE orderDate = '" + day + "'";
+
+			ResultSet rs = statement.executeQuery(query);
+			if (rs.next()) {
+				revenue = rs.getDouble(0);
+			} else {
+				throw new IllegalArgumentException();
+			}
+			conn.close();
+		} catch (SQLException e) {
+			throw new RuntimeException(e);
+		}
 		return revenue;
 	}
-
 }

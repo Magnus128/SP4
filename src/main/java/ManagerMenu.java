@@ -70,7 +70,7 @@ public class ManagerMenu extends Menu {
 		while (input != 0) {
 			switch (input) {
 				case 1:
-					String output = dbConnector.
+					//String output = dbConnector.
 				case 2:
 				case 3:
 				default:
