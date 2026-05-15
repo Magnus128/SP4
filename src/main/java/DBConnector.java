@@ -124,7 +124,7 @@ public class DBConnector {
 			throw new RuntimeException(e);
 		}
 	}
-	public double selectDailyRevenue(String day) {
+	public double selectDailyRevenue(String day) throws IllegalArgumentException, SQLException{
 		double revenue = 0;
 
 		try {
@@ -135,13 +135,13 @@ public class DBConnector {
 
 			ResultSet rs = statement.executeQuery(query);
 			if (rs.next()) {
-				revenue = rs.getDouble(0);
+				revenue = rs.getDouble(1);
 			} else {
 				throw new IllegalArgumentException();
 			}
 			conn.close();
 		} catch (SQLException e) {
-			throw new RuntimeException(e);
+			throw e;
 		}
 		return revenue;
 	}
