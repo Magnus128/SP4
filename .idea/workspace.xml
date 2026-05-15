@@ -4,12 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="8f632976-210e-49ac-8840-8d3c8f12b369" name="Changes" comment="3">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/restaurantData.sqlite" beforeDir="false" afterPath="$PROJECT_DIR$/restaurantData.sqlite" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/DBConnector.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/DBConnector.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/DBConnector.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/DBConnector.class" afterDir="false" />
-    </list>
+    <list default="true" id="8f632976-210e-49ac-8840-8d3c8f12b369" name="Changes" comment="done" />
     <list id="d5e5d773-06f5-4771-9dd5-b4e6f4f665e4" name="Changes by admin" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -99,12 +94,12 @@
     &quot;assignee&quot;: &quot;Magnus128&quot;
   }
 }</component>
-  <component name="GithubPullRequestsUISettings"><![CDATA[{
-  "selectedUrlAndAccountId": {
-    "url": "https://github.com/Magnus128/SP4.git",
-    "accountId": "006ad53a-fe3c-458b-b3a1-34ce1fe30b49"
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/Magnus128/SP4.git&quot;,
+    &quot;accountId&quot;: &quot;006ad53a-fe3c-458b-b3a1-34ce1fe30b49&quot;
   }
-}]]></component>
+}</component>
   <component name="McpProjectServerCommands">
     <commands />
     <urls />
@@ -453,7 +448,15 @@
       <option name="project" value="LOCAL" />
       <updated>1778768291249</updated>
     </task>
-    <option name="localTasksCounter" value="25" />
+    <task id="LOCAL-00025" summary="done">
+      <option name="closed" value="true" />
+      <created>1778832030905</created>
+      <option name="number" value="00025" />
+      <option name="presentableId" value="LOCAL-00025" />
+      <option name="project" value="LOCAL" />
+      <updated>1778832030906</updated>
+    </task>
+    <option name="localTasksCounter" value="26" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -498,7 +501,8 @@
     <MESSAGE value="merge" />
     <MESSAGE value="2" />
     <MESSAGE value="3" />
-    <option name="LAST_COMMIT_MESSAGE" value="3" />
+    <MESSAGE value="done" />
+    <option name="LAST_COMMIT_MESSAGE" value="done" />
   </component>
   <component name="github-copilot-workspace">
     <instructionFileLocations>
