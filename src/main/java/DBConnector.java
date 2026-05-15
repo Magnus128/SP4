@@ -1,10 +1,12 @@
 import java.sql.DriverManager;
+import java.time.format.DateTimeFormatter;
 import java.util.ArrayList;
 import java.sql.*;
 
 public class DBConnector {
 
 	Connection conn;
+	DateTimeFormatter formatter = DateTimeFormatter.ofPattern("HH:mm:ss");
 
 	public void connect(String url) {
 		try {
@@ -91,12 +93,11 @@ public class DBConnector {
 
 	public void insertOrdre(Order order) {
 		String query = "INSERT INTO OrderDetails ( orderID, orderDate, orderTime,itemID) VALUES ( ?, ? ,?,?)";
-
 		try {
 			PreparedStatement pr = conn.prepareStatement(query);
 			pr.setLong(1, order.getOrderID());
 			pr.setString(2, order.getOrderDate().toString());
-			pr.setString(3, order.getOrderTime().toString());
+			pr.setString(3, order.getOrderTime().format(formatter));
 			pr.setDouble(4, order.getMenuID());
 
 			pr.executeUpdate();
@@ -114,7 +115,7 @@ public class DBConnector {
 			PreparedStatement pr = conn.prepareStatement(query);
 			pr.setLong(1, invoice.getOrderID());
 			pr.setString(2, invoice.getDate().toString());
-			pr.setString(3, invoice.getTime().toString());
+			pr.setString(3, invoice.getTime().format(formatter));
 			pr.setDouble(4, invoice.getTotalAmount());
 
 			pr.executeUpdate();
