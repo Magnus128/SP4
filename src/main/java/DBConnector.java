@@ -127,11 +127,10 @@ public class DBConnector {
 	public double selectDailyRevenue(String day) {
 		double revenue = 0;
 
-
 		try {
 			Statement statement = conn.createStatement();
 
-			// day skal være formateret som M/D/YY
+			// day skal være formateret som YYYY-MM-DD
 			String query = "SELECT SUM(totalBill) FROM Invoices WHERE orderDate = '" + day + "'";
 
 			ResultSet rs = statement.executeQuery(query);
