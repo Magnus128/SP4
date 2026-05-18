@@ -1,4 +1,4 @@
-
+package util;
 
 import java.util.ArrayList;
 import java.util.Scanner;
@@ -8,7 +8,7 @@ public class TextUI {
 
     private static Scanner sc = new Scanner(System.in);
 
-    public static ArrayList<String> promptChoice( ArrayList<String> options, int limit, String msg){
+    public ArrayList<String> promptChoice( ArrayList<String> options, int limit, String msg){
         displayMsg(msg);
         displayList(options, "");
         ArrayList<String> choices = new ArrayList<>();  //Lave en beholder til at gemme brugerens valg
@@ -31,46 +31,21 @@ public class TextUI {
         System.out.println(msg);
 
     }
-    public static int promptNumeric(String msg){
-        displayMsg(msg);                       //Stille brugeren et spørgsmål
-        String input = sc.nextLine();                  //Give brugere et sted at placere sit svar og vente på svaret
-        int numInput = Integer.parseInt(input);        //Konvertere svaret til et tal
-
-        return numInput;
-    }
-
-    public static double promptDouble(String msg) {
+    public static int promptNumeric(String msg) {
         displayMsg(msg);                       //Stille brugeren et spørgsmål
         try {
             String input = sc.nextLine();                  //Give brugere et sted at placere sit svar og vente på svaret
-            double numInput = Double.parseDouble(input); //Konvertere svaret til et tal
+            int numInput = Integer.parseInt(input); //Konvertere svaret til et tal
             return numInput;
         } catch (NumberFormatException e) {
-            System.out.println("Please enter a double value");
-            return promptDouble(msg);
+            System.out.println("Please enter a numeric value");
+            return promptNumeric(msg);
         }
     }
 
     public static String promptText(String msg){
         displayMsg(msg);         //Stille brugeren et spørgsmål
         String input = sc.nextLine();          //Give brugere et sted at placere sit svar og vente på svaret
-
-        return input;
-    }
-
-    public static String promptCategory(String msg){
-        displayMsg(msg);         //Stille brugeren et spørgsmål
-        String input = sc.nextLine();          //Give brugere et sted at placere sit svar og vente på svaret
-
-        boolean flag = true;
-        if (input.equalsIgnoreCase("Food")|| input.equalsIgnoreCase("Drink") || input.equalsIgnoreCase("Dessert")) {
-            flag = false;
-        }
-
-        if (flag) {
-            System.out.println("Category skal være Food-Drink-Dessert");
-            return promptCategory(msg);
-        }
 
         return input;
     }
@@ -89,3 +64,4 @@ public class TextUI {
         }
     }
 }
+

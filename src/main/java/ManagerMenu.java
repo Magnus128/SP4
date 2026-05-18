@@ -59,9 +59,33 @@ public class ManagerMenu extends Menu {
 	}
 
 	private void staffMenu() {
+		System.out.println("""
+				1. Add employee
+				2. Delete employee
+				3. Edit Employee
+				4. List Employees
+				0. Afslut""");
+		int input = TextUI.promptNumeric("Indtast et nummer for at vælge: ");
+		while (input != 0) {
+			switch (input) {
+				case 1:
+					addEmployeeDialog();
+					break;
+				case 2:
+					removeEmployeeDialog();
+					break;
+				case 3:
+					editEmployeeDialog();
+					break;
+				case 4:
+					listEmployees();
+					staffMenu();
+					break;
+				default:
+					System.out.println("Prøv igen:");
+			}
 
-
-
+		}
 
 	}
 
@@ -243,4 +267,125 @@ public class ManagerMenu extends Menu {
 		}
 		return itemInfo;
 	}
+
+    public void addEmployeeDialog(){
+
+        String name = TextUI.promptText("Enter employee name");
+
+        int i = 0;
+        for(Job c : Job.values()) {
+            System.out.println(i+". "+c);
+            i++;
+        }
+
+        int jobValue = TextUI.promptNumeric("Select value of employee position");
+        Job[] jobs = Job.values();
+
+        if (jobValue < 0 || jobValue >= jobs.length) {
+            throw new IllegalStateException("Unexpected value: " + jobValue);
+        }
+
+        Job selectedJob = jobs[jobValue];
+
+        int salary = TextUI.promptNumeric("Enter salary without decimals.");
+
+
+
+
+        Employee.employeesList.add(new Employee(selectedJob,salary,name));
+
+    }
+	public void removeEmployeeDialog(){
+
+
+		listEmployees();
+		int value = TextUI.promptNumeric("Which employee do you wish to remove?");
+
+		if (value > 0 && value <= Employee.employeesList.size()) {
+			System.out.println("Removed "+ Employee.employeesList.get(value));
+			Employee.employeesList.remove(value);
+		} else {
+			System.out.println("invalid input");
+			staffMenu();
+		}
+
+
+	}
+
+	public void listEmployees(){
+		for(int i=0; i< Employee.employeesList.size();i++){
+			System.out.println(i+". "+Employee.employeesList.get(i));
+		}
+
+	}
+
+	public void editEmployeeDialog(){
+		listEmployees();
+		int value = TextUI.promptNumeric("Which employee do you wish to edit?");
+
+		System.out.println("""
+				1. Edit salary
+				2. Edit position
+				3. Edit name
+				0. Gå tilbage
+				""");
+
+
+		int choice = TextUI.promptNumeric("Which value do you wish to edit?");
+
+		if(choice == 1){
+
+			int salary = TextUI.promptNumeric("Enter new salary.");
+
+			String name = Employee.employeesList.get(value).name;
+
+			Job selectedJob = Employee.employeesList.get(value).getJob();
+
+			Employee.employeesList.set(value,new Employee(selectedJob,salary,name));
+
+			staffMenu();
+
+		} else if (choice==2) {
+
+			int i = 0;
+			for(Job c : Job.values()) {
+				System.out.println(i+". "+c);
+				i++;
+			}
+
+			int jobValue = TextUI.promptNumeric("Select value of employee position");
+			Job[] jobs = Job.values();
+
+			if (jobValue < 0 || jobValue >= jobs.length) {
+				throw new IllegalStateException("Unexpected value: " + jobValue);
+			}
+
+			Job selectedJob = jobs[jobValue];
+
+			String name = Employee.employeesList.get(value).name;
+
+			int salary = Employee.employeesList.get(value).salary;
+
+
+			Employee.employeesList.set(value,new Employee(selectedJob,salary,name));
+
+			staffMenu();
+
+		} else if (choice == 3){
+
+			String name = TextUI.promptText("Enter employees new name");
+
+			int salary = Employee.employeesList.get(value).salary;
+
+			Job selectedJob = Employee.employeesList.get(value).getJob();
+
+			Employee.employeesList.set(value,new Employee(selectedJob,salary,name));
+
+			staffMenu();
+		} else {
+			staffMenu();
+		}
+	}
+
+
 }
