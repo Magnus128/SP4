@@ -4,16 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="8f632976-210e-49ac-8840-8d3c8f12b369" name="Changes" comment="data">
+    <list default="true" id="8f632976-210e-49ac-8840-8d3c8f12b369" name="Changes" comment="redigere">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/restaurantData.sqlite" beforeDir="false" afterPath="$PROJECT_DIR$/restaurantData.sqlite" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/DBConnector.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/DBConnector.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/ManagerMenu.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ManagerMenu.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/TextUI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/TextUI.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/User.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/DBConnector.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/DBConnector.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/ManagerMenu.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ManagerMenu.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/TextUI.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/TextUI.class" afterDir="false" />
     </list>
     <list id="d5e5d773-06f5-4771-9dd5-b4e6f4f665e4" name="Changes by admin" comment="" />
     <option name="SHOW_DIALOG" value="false" />
@@ -468,7 +461,15 @@
       <option name="project" value="LOCAL" />
       <updated>1778832030906</updated>
     </task>
-    <option name="localTasksCounter" value="26" />
+    <task id="LOCAL-00026" summary="redigere">
+      <option name="closed" value="true" />
+      <created>1779097705603</created>
+      <option name="number" value="00026" />
+      <option name="presentableId" value="LOCAL-00026" />
+      <option name="project" value="LOCAL" />
+      <updated>1779097705603</updated>
+    </task>
+    <option name="localTasksCounter" value="27" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -514,7 +515,8 @@
     <MESSAGE value="2" />
     <MESSAGE value="3" />
     <MESSAGE value="done" />
-    <option name="LAST_COMMIT_MESSAGE" value="done" />
+    <MESSAGE value="redigere" />
+    <option name="LAST_COMMIT_MESSAGE" value="redigere" />
   </component>
   <component name="github-copilot-workspace">
     <instructionFileLocations>

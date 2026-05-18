@@ -60,12 +60,7 @@ public class ManagerMenu extends Menu {
 
 	private void staffMenu() {
 
-		ArrayList<User> users = Restaurant.dbConnector.selectUser();
 
-		for (User u : users) {
-			System.out.println(u);
-		}
-		System.out.println("=======================================");
 
 
 	}
