@@ -59,6 +59,9 @@ public class ManagerMenu extends Menu {
 	}
 
 	private void staffMenu() {
+
+
+
 		System.out.println("""
 				1. Add employee
 				2. Delete employee
@@ -66,7 +69,7 @@ public class ManagerMenu extends Menu {
 				4. List Employees
 				0. Afslut""");
 		int input = TextUI.promptNumeric("Indtast et nummer for at vælge: ");
-		while (input != 0) {
+
 			switch (input) {
 				case 1:
 					addEmployeeDialog();
@@ -85,11 +88,12 @@ public class ManagerMenu extends Menu {
 					System.out.println("Prøv igen:");
 			}
 
-		}
+
 
 	}
 
 	private void inventoryMenu() {
+		System.out.println("Denne del blev ikke færdig.");
 	}
 
 	private void reportsMenu() {
@@ -199,7 +203,7 @@ public class ManagerMenu extends Menu {
 
 				try {
 					item = aktiveItems.get(menuID);
-					price = TextUI.promptNumeric("Nye Pris :");
+					price = TextUI.promptDouble("Nye Pris :");
 					Restaurant.dbConnector.updateMenuCard(item.getId(), price);
 
 				} catch (IndexOutOfBoundsException e) {
@@ -293,6 +297,7 @@ public class ManagerMenu extends Menu {
 
 
         Employee.employeesList.add(new Employee(selectedJob,salary,name));
+		System.out.println("Tilføjet");
 
     }
 	public void removeEmployeeDialog(){
@@ -316,6 +321,7 @@ public class ManagerMenu extends Menu {
 		for(int i=0; i< Employee.employeesList.size();i++){
 			System.out.println(i+". "+Employee.employeesList.get(i));
 		}
+		TextUI.displayMsg("=======================================");
 
 	}
 
@@ -364,7 +370,7 @@ public class ManagerMenu extends Menu {
 
 			String name = Employee.employeesList.get(value).name;
 
-			int salary = Employee.employeesList.get(value).salary;
+			double salary = Employee.employeesList.get(value).salary;
 
 
 			Employee.employeesList.set(value,new Employee(selectedJob,salary,name));
@@ -375,7 +381,7 @@ public class ManagerMenu extends Menu {
 
 			String name = TextUI.promptText("Enter employees new name");
 
-			int salary = Employee.employeesList.get(value).salary;
+			double salary = Employee.employeesList.get(value).salary;
 
 			Job selectedJob = Employee.employeesList.get(value).getJob();
 

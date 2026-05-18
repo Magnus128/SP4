@@ -1,3 +1,5 @@
+
+
 import java.util.ArrayList;
 
 public class KitchenMenu extends  Menu{
@@ -45,7 +47,7 @@ public class KitchenMenu extends  Menu{
 				// Marker ordre som klar
 				int orderId = textUI.promptNumeric("Indtast ordre-ID");
 				for(Order order : activeOrders){
-					if(order.getOrderID() == orderId){
+					if(order.getMenuID() == orderId){
 						order.setOrderstatus(OrderStatus.READY);
 						System.out.println("Ordre er nu klar!");
 						break;

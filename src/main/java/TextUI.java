@@ -2,6 +2,8 @@
 
 import java.util.ArrayList;
 import java.util.Scanner;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 
 public class TextUI {
 
@@ -31,12 +33,16 @@ public class TextUI {
         System.out.println(msg);
 
     }
-    public static int promptNumeric(String msg){
+    public static int promptNumeric(String msg) {
         displayMsg(msg);                       //Stille brugeren et spørgsmål
-        String input = sc.nextLine();                  //Give brugere et sted at placere sit svar og vente på svaret
-        int numInput = Integer.parseInt(input);        //Konvertere svaret til et tal
-
-        return numInput;
+        try {
+            String input = sc.nextLine();                  //Give brugere et sted at placere sit svar og vente på svaret
+            int numInput = Integer.parseInt(input); //Konvertere svaret til et tal
+            return numInput;
+        } catch (NumberFormatException e) {
+            System.out.println("Please enter a numeric value");
+            return promptNumeric(msg);
+        }
     }
 
     public static double promptDouble(String msg) {
@@ -87,5 +93,49 @@ public class TextUI {
         else{
             return promptBinary(msg);
         }
+    }
+
+    public static String promptDate(String msg) throws IllegalArgumentException {
+        displayMsg(msg);
+        String input = sc.nextLine();
+        // Formatet skal være YYYY-MM-DD
+        Pattern p = Pattern.compile("[a-zA-Z]");
+        Matcher m = p.matcher(input);
+        if (input.equals("0")) return input;
+        if (m.find()) {
+            System.out.println("Input indeholder bogstaver");
+            throw new IllegalArgumentException();
+        }
+        if (input.length() != 10) {
+            System.out.println("Input er forkert længde");
+            throw new IllegalArgumentException();
+        }
+        if (input.charAt(4) != '-' || input.charAt(7) != '-') {
+            System.out.println("Bindestrejer placeret forkert");
+            throw new IllegalArgumentException();
+        }
+        return input;
+    }
+
+    public static String promptMonth(String msg) throws IllegalArgumentException {
+        displayMsg(msg);
+        String input = sc.nextLine();
+        // Formatet skal være YYYY-MM
+        Pattern p = Pattern.compile("[a-zA-Z]");
+        Matcher m = p.matcher(input);
+        if (input.equals("0")) return input;
+        if (m.find()) {
+            System.out.println("Input indeholder bogstaver");
+            throw new IllegalArgumentException();
+        }
+        if (input.length() != 7) {
+            System.out.println("Input er forkert længde");
+            throw new IllegalArgumentException();
+        }
+        if (input.charAt(4) != '-') {
+            System.out.println("Bindestrejer placeret forkert");
+            throw new IllegalArgumentException();
+        }
+        return input;
     }
 }

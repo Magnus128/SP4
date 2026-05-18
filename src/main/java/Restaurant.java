@@ -1,3 +1,4 @@
+
 import java.util.ArrayList;
 
 public class Restaurant {
@@ -29,6 +30,11 @@ public class Restaurant {
 		managerMenu = new ManagerMenu();
 		kitchenMenu = new KitchenMenu();
 		kitchenMenu.setActiveOrders(userMenu.activeOrders);
+
+		for (User u : users) {
+			Employee.employeesList.add(new Employee(Job.valueOf(u.getPosition().name()), u.getSalary(), u.getUsername()));
+		}
+
 
 	}
 
