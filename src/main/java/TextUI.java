@@ -43,9 +43,38 @@ public class TextUI {
         }
     }
 
+    public static double promptDouble(String msg) {
+        displayMsg(msg);                       //Stille brugeren et spørgsmål
+        try {
+            String input = sc.nextLine();                  //Give brugere et sted at placere sit svar og vente på svaret
+            double numInput = Double.parseDouble(input); //Konvertere svaret til et tal
+            return numInput;
+        } catch (NumberFormatException e) {
+            System.out.println("Please enter a double value");
+            return promptDouble(msg);
+        }
+    }
+
     public static String promptText(String msg){
         displayMsg(msg);         //Stille brugeren et spørgsmål
         String input = sc.nextLine();          //Give brugere et sted at placere sit svar og vente på svaret
+
+        return input;
+    }
+
+    public static String promptCategory(String msg){
+        displayMsg(msg);         //Stille brugeren et spørgsmål
+        String input = sc.nextLine();          //Give brugere et sted at placere sit svar og vente på svaret
+
+        boolean flag = true;
+        if (input.equalsIgnoreCase("Food")|| input.equalsIgnoreCase("Drink") || input.equalsIgnoreCase("Dessert")) {
+            flag = false;
+        }
+
+        if (flag) {
+            System.out.println("Category skal være Food-Drink-Dessert");
+            return promptCategory(msg);
+        }
 
         return input;
     }
