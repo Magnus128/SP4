@@ -4,17 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="8f632976-210e-49ac-8840-8d3c8f12b369" name="Changes" comment="data">
+    <list default="true" id="8f632976-210e-49ac-8840-8d3c8f12b369" name="Changes" comment="done">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/DBConnector.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/DBConnector.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/ManagerMenu.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ManagerMenu.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/TextUI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/TextUI.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/WaiterMenu.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/WaiterMenu.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/util/TextUI.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/DBConnector.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/DBConnector.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/ManagerMenu.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ManagerMenu.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/TextUI.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/TextUI.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/WaiterMenu.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/WaiterMenu.class" afterDir="false" />
     </list>
     <list id="d5e5d773-06f5-4771-9dd5-b4e6f4f665e4" name="Changes by admin" comment="" />
     <option name="SHOW_DIALOG" value="false" />
@@ -94,7 +89,7 @@
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="main" />
+        <entry key="$PROJECT_DIR$" value="mk2" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -205,7 +200,6 @@
     "Application.Main.executor": "Run",
     "Application.run.executor": "Run",
     "DefaultPlantUmlFileTemplate": "UML Class",
-    "RunOnceActivity.MCP Project settings loaded": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252": "true",
     "RunOnceActivity.git.unshallow": "true",
@@ -267,7 +261,6 @@
       <workItem from="1778596305550" duration="224000" />
       <workItem from="1778657499869" duration="1258000" />
       <workItem from="1778828412792" duration="3301000" />
-      <workItem from="1779087572968" duration="5252000" />
     </task>
     <task id="LOCAL-00001" summary="punkt 1 og 2">
       <option name="closed" value="true" />
