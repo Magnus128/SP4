@@ -4,12 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="8f632976-210e-49ac-8840-8d3c8f12b369" name="Changes" comment="done">
+    <list default="true" id="8f632976-210e-49ac-8840-8d3c8f12b369" name="Changes" comment="data">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/DBConnector.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/DBConnector.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/ManagerMenu.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ManagerMenu.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/DBConnector.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/DBConnector.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/ManagerMenu.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ManagerMenu.class" afterDir="false" />
     </list>
     <list id="d5e5d773-06f5-4771-9dd5-b4e6f4f665e4" name="Changes by admin" comment="" />
     <option name="SHOW_DIALOG" value="false" />
@@ -89,7 +87,7 @@
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="mk2" />
+        <entry key="$PROJECT_DIR$" value="rediger_menu" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -200,13 +198,14 @@
     "Application.Main.executor": "Run",
     "Application.run.executor": "Run",
     "DefaultPlantUmlFileTemplate": "UML Class",
+    "RunOnceActivity.MCP Project settings loaded": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252": "true",
     "RunOnceActivity.git.unshallow": "true",
     "RunOnceActivity.typescript.service.memoryLimit.init": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "codeWithMe.voiceChat.enabledByDefault": "false",
-    "git-widget-placeholder": "manager__menu",
+    "git-widget-placeholder": "best__seller",
     "ignore.virus.scanning.warn.message": "true",
     "kotlin-language-version-configured": "true",
     "node.js.detected.package.eslint": "true",
@@ -261,6 +260,7 @@
       <workItem from="1778596305550" duration="224000" />
       <workItem from="1778657499869" duration="1258000" />
       <workItem from="1778828412792" duration="3301000" />
+      <workItem from="1779087572968" duration="5252000" />
     </task>
     <task id="LOCAL-00001" summary="punkt 1 og 2">
       <option name="closed" value="true" />
@@ -508,7 +508,8 @@
     <MESSAGE value="2" />
     <MESSAGE value="3" />
     <MESSAGE value="done" />
-    <option name="LAST_COMMIT_MESSAGE" value="done" />
+    <MESSAGE value="selectMonthlyRevenue" />
+    <option name="LAST_COMMIT_MESSAGE" value="selectMonthlyRevenue" />
   </component>
   <component name="github-copilot-workspace">
     <instructionFileLocations>
