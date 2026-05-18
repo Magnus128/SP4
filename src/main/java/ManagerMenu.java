@@ -82,14 +82,19 @@ public class ManagerMenu extends Menu {
 				reportsMenu();
 				break;
 			case 2:
-				// System.out.println("Ikke tilgængelig endnu");
 				double monthlyRevenue = showMonthlyRevenue(dbConnector);
 				if (monthlyRevenue == 0) System.out.println("Ingen omsætning fundet i din valgte måned.");
 				else System.out.println("Den samlede omsætning for din valgte måned er: " + monthlyRevenue);
 				reportsMenu();
 				break;
 			case 3:
-				System.out.println("Ikke tilgængelig endnu");
+				int[] itemInfo = getBestSeller(dbConnector);
+				int itemID = itemInfo[0];
+				int amountSold = itemInfo[1];
+				String itemName = Restaurant.menuCard.getMenuItems().get(itemID).getName();
+
+				System.out.println("Den bedst sælgende menugenstand er: " + itemName + "\n" +
+						"Antal solgt: " + amountSold);
 				reportsMenu();
 				break;
 			case 0:
@@ -135,5 +140,14 @@ public class ManagerMenu extends Menu {
 		return revenue;
 	}
 
-
+	private int[] getBestSeller(DBConnector dbConnector) {
+		int[] itemInfo = null;
+		try {
+			// itemInfo is {menuItemID, amountSold}
+			itemInfo = dbConnector.selectBestSeller();
+		} catch (SQLException e) {
+			System.out.println(e.getMessage());
+		}
+		return itemInfo;
+	}
 }

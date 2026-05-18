@@ -170,4 +170,27 @@ public class DBConnector {
 		}
 		return revenue;
 	}
+
+	public int[] selectBestSeller() throws SQLException {
+		int itemID = 0;
+		int count = 0;
+		try {
+			Statement statement = conn.createStatement();
+			String query = "select menuItemID, itemName, count() as itemCount\n" +
+					"from orderDetails join menuCard on menuCard.menuItemID = orderDetails.itemID\n" +
+					"group by menuItemID\n" +
+					"order by  count() desc\n" +
+					"limit 1;";
+			// rs gets the value of an itemID
+			ResultSet rs = statement.executeQuery(query);
+			if (rs.next()) {
+				itemID = rs.getInt("menuItemID");
+				count = rs.getInt("itemCount");
+			}
+			conn.close();
+		} catch (SQLException e) {
+			throw e;
+		}
+		return new int[] {itemID, count};
+	}
 }
