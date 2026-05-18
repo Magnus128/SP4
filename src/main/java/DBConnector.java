@@ -145,4 +145,29 @@ public class DBConnector {
 		}
 		return revenue;
 	}
+
+	public double selectMonthlyRevenue(String yearMonth) throws IllegalArgumentException, SQLException {
+		double revenue = 0;
+		String[] values = yearMonth.split("-");
+		String year = values[0];
+		String month = values[1];
+		try {
+			Statement statement = conn.createStatement();
+
+			// month skal være formateret som YYYY-MM
+			String query = "select sum(totalBill)  from Invoices where strftime('%Y', orderDate) = '" + year + "' " +
+					"and strftime('%m', orderDate) = '" + month + "'";
+
+			ResultSet rs = statement.executeQuery(query);
+			if (rs.next()) {
+				revenue = rs.getDouble(1);
+			} else {
+				throw new IllegalArgumentException();
+			}
+			conn.close();
+		} catch (SQLException e) {
+			throw e;
+		}
+		return revenue;
+	}
 }
