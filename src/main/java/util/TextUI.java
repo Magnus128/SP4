@@ -1,4 +1,4 @@
-
+package util;
 
 import java.util.ArrayList;
 import java.util.Scanner;
@@ -8,7 +8,7 @@ public class TextUI {
 
     private static Scanner sc = new Scanner(System.in);
 
-    public static ArrayList<String> promptChoice( ArrayList<String> options, int limit, String msg){
+    public ArrayList<String> promptChoice( ArrayList<String> options, int limit, String msg){
         displayMsg(msg);
         displayList(options, "");
         ArrayList<String> choices = new ArrayList<>();  //Lave en beholder til at gemme brugerens valg
@@ -31,12 +31,16 @@ public class TextUI {
         System.out.println(msg);
 
     }
-    public static int promptNumeric(String msg){
+    public static int promptNumeric(String msg) {
         displayMsg(msg);                       //Stille brugeren et spørgsmål
-        String input = sc.nextLine();                  //Give brugere et sted at placere sit svar og vente på svaret
-        int numInput = Integer.parseInt(input);        //Konvertere svaret til et tal
-
-        return numInput;
+        try {
+            String input = sc.nextLine();                  //Give brugere et sted at placere sit svar og vente på svaret
+            int numInput = Integer.parseInt(input); //Konvertere svaret til et tal
+            return numInput;
+        } catch (NumberFormatException e) {
+            System.out.println("Please enter a numeric value");
+            return promptNumeric(msg);
+        }
     }
 
     public static String promptText(String msg){
@@ -60,3 +64,4 @@ public class TextUI {
         }
     }
 }
+

@@ -1,4 +1,4 @@
- @startuml
+@startuml
 !pragma layout smetana
 
 ' Del 1
@@ -145,6 +145,11 @@ class Drink
 class Ingredient {
     String name
 }
+class StatReport {
+    String name
+    String description
+    LineChart lineChart
+}
 class EmployeeSchedule {
     TimeSlot[] timeSlots
 }
@@ -178,6 +183,7 @@ OrderStatus --* Order
 Table o-- Customer
 Table o-- Invoice
 Table o-- Reservation
+Restaurant o-- StatReport
 Restaurant o-- EmployeeSchedule
 EmployeeSchedule *-- TimeSlot
 TimeSlot o-- Employee
