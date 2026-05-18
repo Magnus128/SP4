@@ -30,11 +30,9 @@ public class User {
 
 	@Override
 	public String toString() {
-		return "User{" +
-				"userID=" + userID +
-				", username='" + username + '\'' +
-				", salary=" + salary +
-				", position=" + position +
-				'}';
+		return userID +
+				", " + username +
+				", " + salary +
+				", " + position;
 	}
 }

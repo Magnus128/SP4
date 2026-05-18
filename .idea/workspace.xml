@@ -6,15 +6,14 @@
   <component name="ChangeListManager">
     <list default="true" id="8f632976-210e-49ac-8840-8d3c8f12b369" name="Changes" comment="data">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/restaurantData.sqlite" beforeDir="false" afterPath="$PROJECT_DIR$/restaurantData.sqlite" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/DBConnector.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/DBConnector.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/ManagerMenu.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ManagerMenu.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/TextUI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/TextUI.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/WaiterMenu.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/WaiterMenu.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/util/TextUI.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/User.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/DBConnector.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/DBConnector.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/ManagerMenu.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ManagerMenu.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/TextUI.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/TextUI.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/WaiterMenu.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/WaiterMenu.class" afterDir="false" />
     </list>
     <list id="d5e5d773-06f5-4771-9dd5-b4e6f4f665e4" name="Changes by admin" comment="" />
     <option name="SHOW_DIALOG" value="false" />
@@ -212,7 +211,7 @@
     "RunOnceActivity.typescript.service.memoryLimit.init": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "codeWithMe.voiceChat.enabledByDefault": "false",
-    "git-widget-placeholder": "manager__menu",
+    "git-widget-placeholder": "Redigere__Menu",
     "ignore.virus.scanning.warn.message": "true",
     "kotlin-language-version-configured": "true",
     "node.js.detected.package.eslint": "true",
@@ -244,7 +243,7 @@
   <component name="RunManager">
     <configuration name="run" type="Application" factoryName="Application">
       <option name="MAIN_CLASS_NAME" value="Main" />
-      <module name="SP4" />
+      <module name="SP4JDBC" />
       <option name="VM_PARAMETERS" value="--enable-native-access=ALL-UNNAMED" />
       <method v="2">
         <option name="Make" enabled="true" />

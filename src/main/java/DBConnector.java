@@ -170,4 +170,64 @@ public class DBConnector {
 		}
 		return revenue;
 	}
+
+
+	public void updateMenuCard(int id, double price) {
+
+		String query = "update MenuCard set price = ? where menuitemID = ?";
+
+		try {
+			PreparedStatement pr = conn.prepareStatement(query);
+			pr.setDouble(1,price);
+			pr.setInt(2,id);
+
+			pr.executeUpdate();
+			System.out.println("Updated virker");
+			System.out.println("===========================================");
+		} catch (SQLException e) {
+			throw new RuntimeException(e);
+		}
+
+	}
+
+	public void insertMenuCard(String name,String category,double price) {
+
+		String query = "INSERT INTO MenuCard ( itemName,category,price) VALUES ( ?, ?,?)";
+
+		try {
+			PreparedStatement pr = conn.prepareStatement(query);
+			pr.setString(1, name);
+			pr.setString(2, category);
+			pr.setDouble(3, price);
+
+			pr.executeUpdate();
+
+			System.out.println("Inserted virker");
+		} catch (SQLException e) {
+			throw new RuntimeException(e);
+		}
+
+	}
+
+	public void deleteMenuCard(int id) {
+
+		String query = "DELETE FROM MenuCard WHERE menuitemID = ?";
+
+		try {
+			PreparedStatement pr = conn.prepareStatement(query);
+			pr.setInt(1,id);
+
+			pr.executeUpdate();
+			System.out.println("Deleted virker");
+		} catch (SQLException e) {
+			throw new RuntimeException(e);
+		}
+
+	}
+
+
+
+
+
+
 }

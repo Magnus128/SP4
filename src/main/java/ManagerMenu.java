@@ -59,6 +59,15 @@ public class ManagerMenu extends Menu {
 	}
 
 	private void staffMenu() {
+
+		ArrayList<User> users = Restaurant.dbConnector.selectUser();
+
+		for (User u : users) {
+			System.out.println(u);
+		}
+		System.out.println("=======================================");
+
+
 	}
 
 	private void inventoryMenu() {
@@ -101,6 +110,95 @@ public class ManagerMenu extends Menu {
 	}
 
 	private void menuCardMenu() {
+
+		ArrayList<Item> aktiveItems = new ArrayList<>();
+		Item item;
+		int menuID = 0;
+		double price = 0;
+		int inputCategory = 0;
+
+		TextUI.displayMsg("=======================================");
+		int input = TextUI.promptNumeric("1. Add Nye MenuCard \n2. Remove Menucard \n3. Edit Price \n0. Gå tilbage ");
+
+		switch (input) {
+			case 1:
+				TextUI.displayMsg("=======================================");
+				String menucard = TextUI.promptText("Nye MenuCard Navn :");
+				String category = TextUI.promptCategory("Category :");
+
+				price = TextUI.promptDouble("Price :");
+
+				Restaurant.dbConnector.insertMenuCard(menucard,category,price);
+
+				menuCardMenu();
+				break;
+			case 2:
+				inputCategory = TextUI.promptNumeric("1.Food\n2.Drink\n3.Dessert\n4.Back");
+				if (inputCategory == 1) {
+					aktiveItems = Restaurant.dbConnector.selectMenuCard().getByCategory("Food");
+				} else if (inputCategory == 2) {
+					aktiveItems = Restaurant.dbConnector.selectMenuCard().getByCategory("Drink");
+				} else if (inputCategory == 3) {
+					aktiveItems = Restaurant.dbConnector.selectMenuCard().getByCategory("Dessert");
+				} else {
+					menuCardMenu();
+				}
+
+
+				menuID = TextUI.promptNumeric("Menu ID");
+
+				try {
+					item = aktiveItems.get(menuID);
+					Restaurant.dbConnector.deleteMenuCard(item.getId());
+				} catch (IndexOutOfBoundsException e) {
+					System.out.println("menuID findes ikke i listen");
+				} catch (Exception e) {
+					e.printStackTrace();
+				}
+
+
+				menuCardMenu();
+
+				break;
+
+			case 3:
+				inputCategory = TextUI.promptNumeric("1.Food\n2.Drink\n3.Dessert\n4.Back");
+				if (inputCategory == 1) {
+					aktiveItems = Restaurant.dbConnector.selectMenuCard().getByCategory("Food");
+				} else if (inputCategory == 2) {
+					aktiveItems = Restaurant.dbConnector.selectMenuCard().getByCategory("Drink");
+				} else if (inputCategory == 3) {
+					aktiveItems = Restaurant.dbConnector.selectMenuCard().getByCategory("Dessert");
+				}
+
+				menuID = TextUI.promptNumeric("Menu ID");
+
+				try {
+					item = aktiveItems.get(menuID);
+					price = TextUI.promptNumeric("Nye Pris :");
+					Restaurant.dbConnector.updateMenuCard(item.getId(), price);
+
+				} catch (IndexOutOfBoundsException e) {
+					System.out.println("menuID findes ikke i listen");
+				} catch (Exception e) {
+					e.printStackTrace();
+				}
+
+
+				menuCardMenu();
+
+				break;
+
+			case 0:
+				System.out.println("Går tilbage...");
+				TextUI.displayMsg("=======================================");
+				break;
+			default:
+				menuCardMenu();
+				break;
+		}
+
+
 	}
 
 	private double showDailyRevenue(DBConnector dbConnector) {
