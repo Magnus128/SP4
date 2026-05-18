@@ -1,10 +1,12 @@
 import java.sql.DriverManager;
+import java.time.format.DateTimeFormatter;
 import java.util.ArrayList;
 import java.sql.*;
 
 public class DBConnector {
 
 	Connection conn;
+	DateTimeFormatter formatter = DateTimeFormatter.ofPattern("HH:mm:ss");
 
 	public void connect(String url) {
 		try {
@@ -64,10 +66,10 @@ public class DBConnector {
 		return users;
 	}
 
-	public MenuCard selectFoodMenu() {
-		MenuCard foodMenu = new MenuCard();
+	public MenuCard selectMenuCard() {
+		MenuCard menuCard = new MenuCard();
 
-		String query = "select * from foodMenu";
+		String query = "select * from menuCard";
 
 		try {
 			Statement statement = conn.createStatement();
@@ -79,20 +81,68 @@ public class DBConnector {
 				String category = rs.getString("category");
 				double price = rs.getDouble("price");
 
-				foodMenu.getMenuItems().add(new Dish(menuItemID, itemName, category, price));
+				menuCard.getMenuItems().add(new Dish(menuItemID, itemName, category, price));
 			}
 
 		} catch (SQLException e) {
 			throw new RuntimeException(e);
 		}
-		return foodMenu;
+		return menuCard;
 	}
 
-	public MenuCard selectdessertMenu() {
-		return null;
+
+	public void insertOrdre(Order order) {
+		String query = "INSERT INTO OrderDetails ( orderID, orderDate, orderTime,itemID) VALUES ( ?, ? ,?,?)";
+		try {
+			PreparedStatement pr = conn.prepareStatement(query);
+			pr.setLong(1, order.getOrderID());
+			pr.setString(2, order.getOrderDate().toString());
+			pr.setString(3, order.getOrderTime().format(formatter));
+			pr.setDouble(4, order.getMenuID());
+
+			pr.executeUpdate();
+			//System.out.println("Inserted virker");
+		} catch (SQLException e) {
+			throw new RuntimeException(e);
+		}
 	}
 
-	public MenuCard selectdrinksMenu() {
-		return null;
+
+	public void insertInvoice(Invoice invoice) {
+		String query = "INSERT INTO Invoices (orderID, orderDate, orderTime , totalBill) VALUES ( ?, ?, ?, ?)";
+
+		try {
+			PreparedStatement pr = conn.prepareStatement(query);
+			pr.setLong(1, invoice.getOrderID());
+			pr.setString(2, invoice.getDate().toString());
+			pr.setString(3, invoice.getTime().format(formatter));
+			pr.setDouble(4, invoice.getTotalAmount());
+
+			pr.executeUpdate();
+			//System.out.println("Inserted virker");
+		} catch (SQLException e) {
+			throw new RuntimeException(e);
+		}
+	}
+	public double selectDailyRevenue(String day) throws IllegalArgumentException, SQLException{
+		double revenue = 0;
+
+		try {
+			Statement statement = conn.createStatement();
+
+			// day skal være formateret som YYYY-MM-DD
+			String query = "SELECT SUM(totalBill) FROM Invoices WHERE orderDate = '" + day + "'";
+
+			ResultSet rs = statement.executeQuery(query);
+			if (rs.next()) {
+				revenue = rs.getDouble(1);
+			} else {
+				throw new IllegalArgumentException();
+			}
+			conn.close();
+		} catch (SQLException e) {
+			throw e;
+		}
+		return revenue;
 	}
 }

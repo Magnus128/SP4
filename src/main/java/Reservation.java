@@ -29,4 +29,13 @@ public class Reservation {
 		System.out.println("Tidespunkt: " + time);
 		System.out.println("Antal personer: " + personCount);
 	}
+
+	@Override
+	public String toString() {
+		return "Reservation{" +
+				"time=" + time +
+				", personCount=" + personCount +
+				", customerName='" + customerName + '\'' +
+				'}';
+	}
 }
